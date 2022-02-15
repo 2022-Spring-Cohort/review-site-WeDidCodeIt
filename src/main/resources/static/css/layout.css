@@ -7,6 +7,10 @@
   background-color: black;
   border:solid;
   border-color: red;
+  border: #f7c873;
+  border-radius: 10px;
+  max-width: 100%;
+  border-style: ridge;
 }
 
 .hero a{
@@ -43,6 +47,10 @@ img {
   border-radius: 10px;
   
 }
+.descriptPic{
+  width: 500px;
+  
+}
 
 .container1{
   border-radius: 200px;
@@ -54,23 +62,46 @@ img {
   margin: 10px;
   text-decoration: none;
   color: black;
+  width:1000px;
 }
+
+.container2{
+  border-radius: 200px;
+  border: 1px;
+  background-color: #434343;
+  padding: 10px;
+  display: grid;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  width:1000px;
+}
+
 .box1, .box2, .box3{
   flex:1;
   background-color: #a64452;
   margin: 10px 10px 10px 10px;
   border: #f7c873;
   border-radius: 10px;
-  max-width: 66%;
   border-style: ridge;
 }
+.box1_descript{
+  display: flex;
+  justify-content: center;
+}
 
-.container1 a{
+.databox{
+  display: flex;
+}
+
+.container2 a{
   text-decoration: none;
   color: black;
 }
 
-.navigation links{
+.navigation-links ul{
   display:flex;
   flex-direction: row;
+  justify-content: space;
 }
+
