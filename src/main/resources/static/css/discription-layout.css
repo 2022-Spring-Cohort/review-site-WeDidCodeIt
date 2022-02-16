@@ -1,0 +1,107 @@
+
+.hero{
+    display: flex;
+    justify-content: center;
+    border: 5px;   
+    background-color: black;
+    border:solid;
+    border-color: red;
+    border: #f7c873;
+    border-radius: 10px;
+    max-width: 100%;
+    border-style: ridge;
+  }
+  
+  .hero a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .button{
+    background-color: #434343;
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    border-radius: 10px;
+    /* bo */
+  }
+  
+  ol {
+      display: flex;
+      color: blue;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      
+      align-items: flex-end;
+  }
+  
+  body {
+  
+      background-color: #7e5858;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }
+  
+  img {
+    width: 100px;
+    border-radius: 10px;
+    
+  }
+  .descriptPic{
+    width: 500px;
+    
+  }
+  
+  .container1{
+    margin:10px auto;
+    border-radius: 200px;
+    border: 1px;
+    background-color: #434343;
+    padding: 10px;
+    display: flex;
+    align-items: flex;
+    text-decoration: none;
+    color: black;
+    width:1000px;
+  }
+  
+  .container2{
+    border-radius: 200px;
+    border: 1px;
+    background-color: #434343;
+    padding: 10px;
+    display: grid;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    width:1000px;
+  }
+  
+  .box1, .box2, .box3{
+    flex:1;
+    background-color: #a64452;
+    margin: 10px 10px 10px 10px;
+    border: #f7c873;
+    border-radius: 10px;
+    border-style: ridge;
+  }
+  .box1_descript{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .databox{
+    display: flex;
+  }
+  
+  .container2 a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .navigation-links ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space;
+  }
+  
+  
