@@ -15,13 +15,17 @@ public class Language {
     private boolean isCompiled;
     private boolean isFrontEnd;
     private boolean isBackEnd;
+    private double averageSalary;
+    private String inventor;
+    private String uses;
 
-    public Language(long id, String name, boolean isInterpretive, boolean isCompiled,boolean isFrontEnd, boolean isBackEnd) {
+    public Language(long id, String name, String inventor, boolean isInterpretive, boolean isCompiled,boolean isFrontEnd, boolean isBackEnd) {
     this.id = id;
     this.name = name;
     this.isInterpretive=isInterpretive;
     this.isCompiled=isCompiled;
     this.isFrontEnd=isFrontEnd;
+    this.inventor=inventor;
     this.isBackEnd=isBackEnd;
     }
 
@@ -29,6 +33,19 @@ public class Language {
     private Language(){
 
     }
+
+    public double getAverageSalary() {
+        return averageSalary;
+    }
+
+    public String getInventor() {
+        return inventor;
+    }
+
+    public String getUses() {
+        return uses;
+    }
+
     public String getName() {
         return name;
     }

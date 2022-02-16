@@ -22,21 +22,31 @@
 
 <main>
 
-    long id, String name, boolean isInterpretive, boolean isCompiled,boolean isFrontEnd, boolean isBackEnd
+<!--    Language language = new Language(42, "Java","name of the inventor",true ,false,false,true);-->
     <section id="flex-item language-compare">
-        <h1 th:each="myLanguage:${languages}"><a th:ref="'/books/'+${myLanguage.id}" th:text="${myLanguage.name}">This
+        <h1 th:each="myLanguage:${languages}"><a th:ref="'/languages/'+${myLanguage.id}" th:text="${myLanguage.id}">This
             is the language being compared</a></h1>
 
-        <h1 th:each="myLanguage:${languages}"><a th:ref="'/books/'+${myLanguage.name}" th:text="${myLanguage.name}"></a>This
-            is interpretive</a></h1>
+        <h1 th:each="myLanguage:${languages}"><a th:ref="'/languages/'+${myLanguage.name}" th:text="${myLanguage.name}"></a>This
+            is the name.</a></h1>
+
+        <h1 th:each="myLanguage:${languages}"><a th:ref="'languages/'+${myLanguage.inventor}"
+                                                 th:text="${myLanguage.inventor}"></a>This is the inventor</a></h1>
+
         <h1 th:each="myLanguage:${languages}"><a th:ref="'/books/'+${myLanguage.isInterpretive}"
-                                                 th:text="${myLanguage.isInterpretive}"></a>This is compiled</a></h1>
+                                                 th:text="${myLanguage.isInterpretive}"></a>This is interpretive</a></h1>
+
         <h1 th:each="myLanguage:${languages}"><a th:ref="'/books/'+${myLanguage.isCompiled}"
-                                                 th:text="${myLanguage.isCompiled}"></a>This is front end</a></h1>
+                                                 th:text="${myLanguage.isCompiled}"></a>This is compiled</a></h1>
+
         <h1 th:each="myLanguage:${languages}"><a th:ref="'/books/'+${myLanguage.isFrontEnd}"
-                                                 th:text="${myLanguage.isFrontEnd}"></a>This is backend</a></h1>
-        <h1 th:each="myLanguage:${languages}"><a th:ref="'/books/'+${myLanguage.isFrontEnd}"
-                                                 th:text="${myLanguage.isFrontEnd}"></a>This is backend</a></h1>
+                                                 th:text="${myLanguage.isFrontEnd}"></a>This is front end</a></h1>
+
+        <h1 th:each="myLanguage:${languages}"><a th:ref="'/books/'+${myLanguage.isBackEnd}"
+                                                 th:text="${myLanguage.isBackEnd}"></a>This is backend</a></h1>
+
+
+
     </section>
 
 
