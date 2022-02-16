@@ -4,8 +4,8 @@
     <link rel="stylesheet" href="#Design.css">
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="css/lanuage-compare-layout.css">
-    <link rel="stylesheet" type="text/css" href="css/lanuage-compare-style.css">
+    <link rel="stylesheet" type="text/css" href="css/language-compare-layout.css">
+    <link rel="stylesheet" type="text/css" href="css/language-compare-style.css">
 
 
 </head>
@@ -22,36 +22,28 @@
 
         <main>
             <section id = "flex-item language-compare">
-            <h1 th:text = "${language.comparison1}">This is the language being compared</h1>
-            <h2 th:text = "${language.comparison2}">This is the second comparison review</h2>
-            <h2 th:text = "${language.comparison3}">This is the third comparison review</h2>
-            <h2 th:text = "${language.comparison4}">This is the fourth comparison review</h2>
+            <h1 th:text = "${inlanguage.name}">This is the language being compared</h1>
+            <h2 th:text = "${inlanguage.isInterpretive}">This is interpretive</h2>
+            <h2 th:text = "${inlanguage.isCompiled}">This is compiled</h2>
+            <h2 th:text = "${inlanguage.isFrontEnd}">This is front end</h2>
+                <h2 th:text = "${inlanguage.isBackEnd}">This is backend</h2>
+
             </section>
 
             
         </main>
 
-
-
-
-            
-            <div class="">
-                IN A WORLD<br>
-                FAR FAR AWAY
-            </div>
-        </div>
-        
     <div class="container1">
     
-        <div class="box1"><h2>Java</h2>
+        <div class="box1">
+
+            <h2>Java</h2>
             <img src="/pics/java.png" alt=""/>
-<p>
-    Java is a Object Oriented Programming (OOP) language. It's aight.
-</p>
+
 <p>
     Companies all across the world use and depend on Java programmers.
 </p>            
-        </p></div>
+        </div>
         <div class="box2"><h2>C# (C Sharp)</h2>
             <p> <img src="/pics/cSharp.png" alt=""/>
             </p>
