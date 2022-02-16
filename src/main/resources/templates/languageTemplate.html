@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="#Design.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/language-compare-layout.css">
+    <link rel="stylesheet" type="text/css" href="css/language-compare-style.css">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="hero">
+            <nav>
+        
+                <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!">
+            </nav>
+        </div>
+        </header>
+
+        <main>
+            <section id = "flex-item language-compare">
+            <h1 th:text = "${inlanguage.name}">This is the language being compared</h1>
+            <h2 th:text = "${inlanguage.isInterpretive}">This is interpretive</h2>
+            <h2 th:text = "${inlanguage.isCompiled}">This is compiled</h2>
+            <h2 th:text = "${inlanguage.isFrontEnd}">This is front end</h2>
+                <h2 th:text = "${inlanguage.isBackEnd}">This is backend</h2>
+
+            </section>
+
+            
+        </main>
+
+    <div class="container1">
+    
+        <div class="box1">
+
+            <h2>Java</h2>
+            <img src="/pics/java.png" alt=""/>
+
+<p>
+    Companies all across the world use and depend on Java programmers.
+</p>            
+        </div>
+        <div class="box2"><h2>C# (C Sharp)</h2>
+            <p> <img src="/pics/cSharp.png" alt=""/>
+            </p>
+            C# is a Object Oriented Programming (OOP) language. It's like Java but sharper.
+        </div>
+        
+        <div class="box3"><h2>Python</h2> <p> <img src="/pics/python.png" alt=""/>  </p>
+            Python is pretty neat. It does stuff. Amazing. Wow.
+        </div>
+    </div>
+    
+</body>
+</html>
