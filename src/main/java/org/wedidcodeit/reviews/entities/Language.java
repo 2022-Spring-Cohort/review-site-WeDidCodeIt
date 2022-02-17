@@ -20,11 +20,16 @@ public class Language {
     private double averageSalary;
     private String inventor;
     private String uses;
+    private String salary;
 
+<<<<<<< HEAD
     @ElementCollection
     private Collection<String> reviews;
 
     public Language(long id, String name, String inventor, boolean isInterpretive, boolean isCompiled,boolean isFrontEnd, boolean isBackEnd) {
+=======
+    public Language(long id, String name, String inventor, boolean isInterpretive, boolean isCompiled,boolean isFrontEnd, boolean isBackEnd, String Salary) {
+>>>>>>> f62676401ef47a791480a92e1e455af29aed06ed
     this.id = id;
     this.name = name;
     this.isInterpretive=isInterpretive;
@@ -32,6 +37,7 @@ public class Language {
     this.isFrontEnd=isFrontEnd;
     this.inventor=inventor;
     this.isBackEnd=isBackEnd;
+    this.salary=salary;
     }
 
 
@@ -75,12 +81,16 @@ public class Language {
         return isBackEnd;
     }
 
+<<<<<<< HEAD
     public Collection<String> getReviews() {
         return reviews;
     }
     public void addReview(String review){
         reviews.add(review);
     }
+=======
+    public String isSalary() { return salary; }
+>>>>>>> f62676401ef47a791480a92e1e455af29aed06ed
 
 
 
