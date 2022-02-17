@@ -18,9 +18,9 @@ public class Language {
     private double averageSalary;
     private String inventor;
     private String uses;
-    private int salary;
+    private String salary;
 
-    public Language(long id, String name, String inventor, boolean isInterpretive, boolean isCompiled,boolean isFrontEnd, boolean isBackEnd, int Salary) {
+    public Language(long id, String name, String inventor, boolean isInterpretive, boolean isCompiled,boolean isFrontEnd, boolean isBackEnd, String Salary) {
     this.id = id;
     this.name = name;
     this.isInterpretive=isInterpretive;
@@ -72,7 +72,7 @@ public class Language {
         return isBackEnd;
     }
 
-    public int isSalary() { return salary; }
+    public String isSalary() { return salary; }
 
 
 
