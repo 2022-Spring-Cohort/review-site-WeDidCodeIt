@@ -3,28 +3,11 @@
 .hero{
   display: flex;
   justify-content: center;
-  border: 5px;   
   background-color: black;
-  border:solid;
-  border-color: red;
   border: #f7c873;
   border-radius: 10px;
   max-width: 100%;
   border-style: ridge;
-}
-
-.hero a{
-  text-decoration: none;
-  color: white;
-}
-
-.button{
-  background-color: #434343;
-  display: flex;
-  margin: 10px;
-  justify-content: center;
-  border-radius: 10px;
-  /* bo */
 }
 
 ol {
@@ -36,16 +19,14 @@ ol {
 }
 
 body {
-
-    background-color: #7e5858;
+  background-color: rgb(87, 25, 25);
   font-family: Arial, Helvetica, sans-serif;
-  
+  height: 100%;
 }
 
 img {
   width: 100px;
   border-radius: 10px;
-  
 }
 .descriptPic{
   width: 500px;
@@ -57,28 +38,15 @@ img {
   border: 1px;
   background-color: #434343;
   padding: 10px;
-  display: flex;
-  align-items: flex;
-  margin: 10px;
-  text-decoration: none;
-  color: black;
-  width:1000px;
-}
-
-.container2{
-  border-radius: 200px;
-  border: 1px;
-  background-color: #434343;
-  padding: 10px;
   display: grid;
-  margin: 10px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows:auto;
+  margin: 10px auto;
   text-decoration: none;
-  color: black;
-  width:1000px;
+  width: 80%;
 }
 
-.box1, .box2, .box3{
-  flex:1;
+.box{
   background-color: #a64452;
   margin: 10px 10px 10px 10px;
   border: #f7c873;
@@ -90,18 +58,10 @@ img {
   justify-content: center;
 }
 
-.databox{
-  display: flex;
-}
-
-.container2 a{
+.container1 a{
+  display:inline-block;
   text-decoration: none;
   color: black;
+  height: 100%;
+  width: 100%;
 }
-
-.navigation-links ul{
-  display:flex;
-  flex-direction: row;
-  justify-content: space;
-}
-
