@@ -11,6 +11,7 @@ public class Populator implements CommandLineRunner {
     @Autowired
     LanguageRepository languageRepo;
 
+
     @Override
     public void run(String...args) throws Exception{
         Language language = new Language(42, "Java","name of the inventor",true ,false,false,true);
