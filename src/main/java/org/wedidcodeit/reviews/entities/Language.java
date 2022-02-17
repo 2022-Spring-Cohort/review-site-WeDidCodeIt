@@ -20,7 +20,7 @@ public class Language {
     private String uses;
     private int salary;
 
-    public Language(long id, String name, String inventor, boolean isInterpretive, boolean isCompiled,boolean isFrontEnd, boolean isBackEnd) {
+    public Language(long id, String name, String inventor, boolean isInterpretive, boolean isCompiled,boolean isFrontEnd, boolean isBackEnd, int Salary) {
     this.id = id;
     this.name = name;
     this.isInterpretive=isInterpretive;

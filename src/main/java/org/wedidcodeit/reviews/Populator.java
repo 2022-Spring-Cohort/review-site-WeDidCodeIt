@@ -13,19 +13,19 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String...args) throws Exception{
-        Language language = new Language(42, "Java","name of the inventor",true ,false,false,true);
+        Language language = new Language(42, "Java","James Gosling",false ,true,false,true, 79000);
         languageRepo.save(language);
 
 //        languageRepo.save(new Language(24, "Python","name of the inventor",true ,false,false,true));
-        languageRepo.save(new Language(34, "Kotlin", "JetBrains", false, true,true, true));
-        languageRepo.save(new Language(33, "Python", "Guido van Rossum", true, false, true, true));
-        languageRepo.save(new Language(22, "Swift", "Ted Kremenek", false, true, true, true));
-        languageRepo.save(new Language(64, "C#", "Microsoft", false, true, true, true));
-        languageRepo.save(new Language(76, "Go", "Robert Pike", false, true, true, true));
-        languageRepo.save(new Language(35, "PHP", "Ramsmus Lerdorf", false, true, true, true));
-        languageRepo.save(new Language(94, "MatLab", "Cleve Moler", true, false, true, true));
-        languageRepo.save(new Language(83, "R","Robert Gentleman", true, false, false, true));
-        languageRepo.save(new Language(47, "HTML/CSS", "World Wide Web Consortium", true, false, true, false));
+        languageRepo.save(new Language(34, "Kotlin", "JetBrains", false, true,true, true, 136000));
+        languageRepo.save(new Language(33, "Python", "Guido van Rossum", true, false, true, true, 72500));
+        languageRepo.save(new Language(22, "Swift", "Ted Kremenek", false, true, true, true, 96000));
+        languageRepo.save(new Language(64, "C#", "Microsoft", false, true, true, true, 68000));
+        languageRepo.save(new Language(76, "Go", "Robert Pike", false, true, true, true, 92000));
+        languageRepo.save(new Language(35, "PHP", "Ramsmus Lerdorf", false, true, true, true, 81500));
+        languageRepo.save(new Language(94, "MatLab", "Cleve Moler", true, false, true, true, 101000));
+        languageRepo.save(new Language(83, "R","Robert Gentleman", true, false, false, true, 91000));
+        languageRepo.save(new Language(47, "HTML/CSS", "World Wide Web Consortium", true, false, true, false, 68707));
 
     }
 
