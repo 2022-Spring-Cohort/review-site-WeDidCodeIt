@@ -15,8 +15,7 @@ public class LanguageType {
     private String uses;
     private String description;
 
-    public LanguageType(long id, String languageName, String uses, String description) {
-        this.id = id;
+    public LanguageType( String languageName, String uses, String description) {
         this.languageName = languageName;
         this.uses = uses;
         this.description = description;
