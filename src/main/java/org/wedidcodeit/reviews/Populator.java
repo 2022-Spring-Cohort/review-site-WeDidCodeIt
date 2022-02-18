@@ -23,19 +23,19 @@ public class Populator implements CommandLineRunner {
         LanguageType compiled = new LanguageType("compiled", "Temp", "Temp");
         languageTypeRepo.save(interpretive);
         languageTypeRepo.save(compiled);
-        Language language = new Language("Java","James Gosling",false ,true,false,true, "$79,000");
+        Language language = new Language("Java",false,true ,79000,"James Gosling","Temp", compiled);
         languageRepo.save(language);
 
 //        languageRepo.save(new Language(24, "Python","name of the inventor",true ,false,false,true));
-        languageRepo.save(new Language( "Kotlin", false, true,true, true, 136000, "JetBrains", "Temp", compiled);
-        languageRepo.save(new Language( "Python", "Guido van Rossum", true, false, true, true, "$72,500"));
-        languageRepo.save(new Language( "Swift", "Ted Kremenek", false, true, true, true, "$96,000"));
-        languageRepo.save(new Language( "C#", "Microsoft", false, true, true, true, "$68,000"));
-        languageRepo.save(new Language( "Go", "Robert Pike", false, true, true, true, "$92,000"));
-        languageRepo.save(new Language( "PHP", "Ramsmus Lerdorf", false, true, true, true, "$81,500"));
-        languageRepo.save(new Language( "MatLab", "Cleve Moler", true, false, true, true, "$101,000"));
-        languageRepo.save(new Language( "R","Robert Gentleman", true, false, false, true, "$91,000"));
-        languageRepo.save(new Language( "HTML/CSS", "World Wide Web Consortium", true, false, true, false, "$68,707"));
+        languageRepo.save(new Language( "Kotlin", true, true,136000, "JetBrains", "Temp", compiled));
+        languageRepo.save(new Language( "Python", true, true, 72500, "Guido van Rossum", "Temp", interpretive));
+        languageRepo.save(new Language( "Swift", false, true, 96000, "Ted Kremenek", "Temp", compiled));
+        languageRepo.save(new Language( "C#", false, true, 68000, "Microsoft", "Temp", compiled));
+        languageRepo.save(new Language( "Go", true, true, 92000, "Rob Pike", "Temp", compiled));
+        languageRepo.save(new Language( "PHP", false, true, 81500, "Rasmus Ierdorf", "Temp", compiled));
+        languageRepo.save(new Language( "MatLab", true, true, 101000, "Cleve Moler", "Temp", interpretive));
+        languageRepo.save(new Language( "R",false, true, 91000, "Robert Gentleman", "Temp", interpretive));
+        languageRepo.save(new Language( "HTML/CSS", true, false, 68000, "World Wide Web Consortium", "Temp", interpretive));
 
     }
 
