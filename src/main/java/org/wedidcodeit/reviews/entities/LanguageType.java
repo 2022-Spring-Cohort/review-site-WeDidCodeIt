@@ -11,12 +11,12 @@ public class LanguageType {
     @Id
     @GeneratedValue
     private long id;
-    private String languageName;
+    private String name;
     private String uses;
     private String description;
 
-    public LanguageType( String languageName, String uses, String description) {
-        this.languageName = languageName;
+    public LanguageType( String name, String uses, String description) {
+        this.name = name;
         this.uses = uses;
         this.description = description;
     }
@@ -36,7 +36,7 @@ public class LanguageType {
     }
 
     public String getLanguageName() {
-        return languageName;
+        return name;
     }
 
     public String getUses() {
