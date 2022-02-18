@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="#Design.css">
+    <meta charset="UTF-8">
+    <title>Language Types</title>
+    <link rel="stylesheet" type="text/css" href="css/language-compare-layout.css">
+    <link rel="stylesheet" type="text/css" href="css/language-compare-style.css">
+
+
+</head>
+
+<body>
+<header>
+    <div class="hero">
+        <nav>
+
+            <img src="pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!"/>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<!--    Language language = new Language(42, "Java","name of the inventor",true ,false,false,true);-->
+
+
+<!--    These will be for language types like interpretive and compiled-->
+    <section id="flex-item language-compare">
+        <h1 th:each="inLanguageType:${name}"><a th:ref="'/languagetypes/'+${inLanguageType.id}" th:text="${inLanguageType.id}">This
+            is the language being compared</a></h1>
+
+        <h1 th:each="inLanguageType:${languageType}"><a th:ref="'/languages/'+${inLanguageType.name}" th:text="${inLanguageType.name}"></a>This
+            is the name.</a></h1>
+
+        <h1 th:each="inLanguageType:${languages}"><a th:ref="'languages/'+${inLanguageType.inventor}"
+                                                 th:text="${inLanguage.inventor}"></a>This is the inventor</a></h1>
+
+        <h1 th:each="inLanguageType:${languages}"><a th:ref="'/books/'+${inLanguageType.isInterpretive}"
+                                                 th:text="${inLanguage.isInterpretive}"></a>This is interpretive</a></h1>
+
+        <h1 th:each="inLanguageType:${languages}"><a th:ref="'/books/'+${inLanguageType.isCompiled}"
+                                                 th:text="${inLanguage.isCompiled}"></a>This is compiled</a></h1>
+
+        <h1 th:each="inLanguageType:${languages}"><a th:ref="'/books/'+${inLanguageType.isFrontEnd}"
+                                                 th:text="${inLanguage.isFrontEnd}"></a>This is front end</a></h1>
+
+<!--      <h1 th:each="in @RequestMapping("/languagetypes{id}")
+        public String showLanguagesByType(Model model,@PathVariable String languageType){
+        Optional<LanguageType> tempLanguageType = languageTypeRepo.findByNameIgnoreCase(languageType);
+        if(tempLanguageType.isPresent()){
+        model.addAttribute("inLanguageType",tempLanguageType.get());
+        }
+        return "LanguageTypeTemplate";
+        }Language:${languages}"><a th:ref="'/books/'+${myLanguage.isBackEnd}"
+                                                 th:text="${myLanguage.isBackEnd}"></a>This is backend</a></h1>
+
+-->
+
+    </section>
+
+
+</main>
+
+<div class="container1">
+
+    <div class="box1">
+
+        <h2>Java</h2>
+        <img src="/pics/java.png" alt=""/>
+
+        <p>
+            Companies all across the world use and depend on Java programmers.
+        </p>
+    </div>
+    <div class="box2"><h2>C# (C Sharp)</h2>
+        <p><img src="/pics/cSharp.png" alt=""/>
+        </p>
+        C# is a Object Oriented Programming (OOP) language. It's like Java but sharper.
+    </div>
+
+    <div class="box3"><h2>Python</h2>
+        <p><img src="/pics/python.png" alt=""/></p>
+        Python is pretty neat. It does stuff. Amazing. Wow.
+    </div>
+</div>
+
+</body>
+</html>

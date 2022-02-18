@@ -12,30 +12,39 @@ import java.util.Optional;
 public class LanguageTypeController {
     private LanguageTypeRepository languageTypeRepo;
 
-    public LanguageTypeController(LanguageTypeRepository LanguageTypeRepo) {
+    public LanguageTypeController(LanguageTypeRepository languageTypeRepo) {
         this.languageTypeRepo = languageTypeRepo;
     }
 
 
     @RequestMapping("/")
     public String showLanguageTypePage(Model model) {
-        model.addAttribute("languageTypes", languageTypeRepo.findAll());
-        return "LanguagesTemplate";
+        model.addAttribute("inLanguageType", languageTypeRepo.findAll());
+        return "LanguageTypeTemplate";
     }
 
-    @GetMapping("/languageTypes/{id}")
+    @GetMapping("/languagetypes/{id}")
         public String showLanguageTypeTemplate (Model model, @PathVariable long id){
             Optional<LanguageType> tempLanguageType = languageTypeRepo.findById(id);
             if(tempLanguageType.isPresent()){
                 model.addAttribute("inLanguageType", tempLanguageType.get());
         }
-        return "LanguageTypesTemplate";
+        return "LanguageTypeTemplate";
     }
-    @RequestMapping("/languageTypes/languages/{language}")
+    @RequestMapping("/languagetypes/{name}")
     public String showLanguagesByType(Model model,@PathVariable String languageType){
         Optional<LanguageType> tempLanguageType = languageTypeRepo.findByNameIgnoreCase(languageType);
         if(tempLanguageType.isPresent()){
     model.addAttribute("inLanguageType",tempLanguageType.get());
+        }
+        return "LanguageTypeTemplate";
+    }
+
+    @RequestMapping("/languagetypes/language/{id}")
+    public String showLanguagesByName(Model model,@PathVariable String languageType){
+        Optional<LanguageType> tempLanguageType = languageTypeRepo.findByNameIgnoreCase(languageType);
+        if(tempLanguageType.isPresent()){
+            model.addAttribute("inLanguageType",tempLanguageType.get());
         }
         return "LanguageTypeTemplate";
     }

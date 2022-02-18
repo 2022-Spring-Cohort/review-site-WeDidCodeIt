@@ -19,7 +19,7 @@ public class LanguageController {
     @RequestMapping("/language/{id}")
     public String showLanguagesTemplate(Model model, @PathVariable long id) {
         model.addAttribute("inLanguage", languageRepo.findById(id).get());
-        return "LanguageTemplate";
+        return "LanguagesTemplate";
     }
 
     @GetMapping("/language/{id}")
@@ -29,7 +29,7 @@ public class LanguageController {
         {
             model.addAttribute("inLanguage", tempLanguage.get());
         }
-        return "LanguageTemplate";
+        return "LanguagesTemplate";
     }
     @PostMapping("/languages/{id}")
     public String addReview(@PathVariable long id, @RequestParam String review){
