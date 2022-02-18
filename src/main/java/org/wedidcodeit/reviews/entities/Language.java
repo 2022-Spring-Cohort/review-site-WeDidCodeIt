@@ -25,10 +25,8 @@ public class Language {
     @ElementCollection
     private Collection<String> reviews;
 
-    public Language(String name, boolean isInterpretive, boolean isCompiled, boolean isFrontEnd, boolean isBackEnd, double averageSalary, String inventor, String uses, LanguageType languageType) {
+    public Language(String name, boolean isFrontEnd, boolean isBackEnd, double averageSalary, String inventor, String uses, LanguageType languageType) {
         this.name = name;
-        this.isInterpretive = isInterpretive;
-        this.isCompiled = isCompiled;
         this.isFrontEnd = isFrontEnd;
         this.isBackEnd = isBackEnd;
         this.averageSalary = averageSalary;
