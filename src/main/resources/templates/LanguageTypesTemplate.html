@@ -6,43 +6,47 @@
     <title>Language Types</title>
     <link rel="stylesheet" type="text/css" href="css/language-compare-layout.css">
     <link rel="stylesheet" type="text/css" href="css/language-compare-style.css">
-
-
 </head>
-
 <body>
 <header>
-    <h1> This is the language type template</h1>
 
-    <p th:text = "'The language type for this page is ' + ${inLanguageType.name}+'.'">This is the language type. Below are the languages that fall under this category</p>
+<h1> Here is a list of programming language types.</h1>
+    <section class = "languageTypes">
+        <ul>
+            <li th:each="languageType: ${languageTypes}" ><a th:text = "${languageType.name}" th:href = "'/languagetypes/' + ${languageType.id}">Sample Language type Title> Stuff</a></li>
+        </ul>
+    </section>
     <div class="hero">
+
         <nav>
 
             <img src="pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!"/>
         </nav>
     </div>
+
 </header>
 
 <main>
 
-    <p> This is where the different languages within the language type --> <a th:text = "${inLanguageType.name}">LanguageType</a> <-- should be.</p>
-    <ul>
-
-        <li th:each="language: ${inLanguage}"  th:text = "${language.name}">Sample Language type Title</li>
-
-    </ul>
+<!--    Language language = new Language(42, "Java","name of the inventor",true ,false,false,true);-->
 
 
-<p> *****Below should show a list of <a th:text = "${inLanguageType.name}"></a> languages.****</p>
-
-    <ul>
-        <li th:each = "languages:${inLanguages}" th:if="${languages.isCompiled}" th:text= "${languages.name} + ' is a ' + ${inLanguageType.name}' + ' language.'"> This is the name of the language </li>
-    </ul>
+<!--    These will be for language types like interpretive and compiled-->
 
 
 
 
+<!--      <h1 th:each="in @RequestMapping("/languagetypes{id}")
+        public String showLanguagesByType(Model model,@PathVariable String languageType){
+        Optional<LanguageType> tempLanguageType = languageTypeRepo.findByNameIgnoreCase(languageType);
+        if(tempLanguageType.isPresent()){
+        model.addAttribute("inLanguageType",tempLanguageType.get());
+        }
+        return "LanguageTypeTemplate";
+        }Language:${languages}"><a th:ref="'/books/'+${myLanguage.isBackEnd}"
+                                                 th:text="${myLanguage.isBackEnd}"></a>This is backend</a></h1>
 
+-->
 
 
 

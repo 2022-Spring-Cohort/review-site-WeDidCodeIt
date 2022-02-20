@@ -53,4 +53,12 @@ public class LanguageType {
     public void addReview(String review){
         reviews.add(review);
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public Collection<Language> getLanguages() {
+        return languages;
+    }
 }
