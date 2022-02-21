@@ -36,9 +36,18 @@
 <p> *****Below should show a list of <a th:text = "${inLanguageType.name}"></a> languages.****</p>
 
     <ul>
-        <li th:each = "languages:${inLanguages}" th:if="${languages.isCompiled}" th:text= "${languages.name} + ' is a ' + ${inLanguageType.name}' + ' language.'"> This is the name of the language </li>
+        <li th:each = "languages:${inLanguages}" th:if="${languages.languageTypeString== 'interpretive'}" th:text= "${languages.name} + ' is a ' + ${inLanguageType.name}' + ' language.'"> This is the name of the language </li>
+        <li th:each = "languages:${inLanguages}" th:if="${languages.languageTypeString=='compiled'}" th:text= "${languages.name} + ' is a ' + ${inLanguageType.name}' + ' language.'"> This is the name of the language </li>
     </ul>
 
+
+    <div th:each="languages : ${inLanguages}">
+    <span th:switch="${languages.languageType}">
+        <p th:case="'interpretive'">Interpretive Languages: <th:block th:text="${languages.name}">interpretive language name</th:block></p>
+        <p th:case="'compiled'">Compiled Languages:<th:block th:text="${languages.name}">compiled language name</th:block></p>
+        <p th:case="*">Other language</p>
+    </span>
+    </div>
 
 
 
