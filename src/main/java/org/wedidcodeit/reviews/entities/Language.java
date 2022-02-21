@@ -10,8 +10,7 @@ public class Language {
     @GeneratedValue
     private long id;
     private String name;
-    private boolean isInterpretive;
-    private boolean isCompiled;
+
     private boolean isFrontEnd;
     private boolean isBackEnd;
     private double averageSalary;
@@ -19,8 +18,11 @@ public class Language {
     private String uses;
     private String salary;
 
+
     @ManyToOne
     private LanguageType languageType;
+
+    private String languageTypeString  = languageType.toString();
 
     @ElementCollection
     private Collection<String> reviews;
@@ -61,13 +63,7 @@ public class Language {
         return id;
     }
 
-    public boolean isInterpretive() {
-        return isInterpretive;
-    }
 
-    public boolean isCompiled() {
-        return isCompiled;
-    }
 
     public boolean isFrontEnd() {
         return isFrontEnd;
