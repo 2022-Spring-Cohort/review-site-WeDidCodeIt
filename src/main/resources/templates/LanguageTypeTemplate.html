@@ -28,16 +28,16 @@
     <p> This is where the different languages within the language type --> <a th:text = "${inLanguageType.name}">LanguageType</a> <-- should be.</p>
     <ul>
 
-        <li th:each="language: ${inLanguage}"  th:text = "${language.name}">Sample Language type Title</li>
+        <li th:each="language: ${inLanguage}"  th:text = "${language.name}  th:text = ${language.uses}">Sample Language type Title</li>
+        <li th:each="language: ${inLanguage}"  th:text = "${language.uses}">Sample Language type description</li>
+
 
     </ul>
-
-
-<p> *****Below should show a list of <a th:text = "${inLanguageType.name}"></a> languages.****</p>
+    <p> *****Below should show a list of <a th:text = "${inLanguageType.name}"></a> languages.****</p>
 
     <ul>
-        <li th:each = "languages:${inLanguages}" th:if="${languages.languageTypeString== 'interpretive'}" th:text= "${languages.name} + ' is a ' + ${inLanguageType.name}' + ' language.'"> This is the name of the language </li>
-        <li th:each = "languages:${inLanguages}" th:if="${languages.languageTypeString=='compiled'}" th:text= "${languages.name} + ' is a ' + ${inLanguageType.name}' + ' language.'"> This is the name of the language </li>
+        <li th:each = "languages:${inLanguageType.languages}" th:text= "${languages.name}"> This is the name of the language </li>
+
     </ul>
 
 
