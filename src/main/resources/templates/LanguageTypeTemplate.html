@@ -23,17 +23,19 @@
 <!--    </div>-->
     <div class="hero">
         <nav class = "flex-item navigation-links">
-            <a href="index.html"> <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!">
+            <a href="index.html"> <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!"> </a>
         </nav>
+
+</div>
 </header>
-</div>
 <div class="container1">
-    <a href="Descprition.html">
-        <div class="box" th:each="language: ${inLanguageType.languages}"> <h1 th:text = "${language.name}">Java</h1>
+
+        <div class="box" th:each="language: ${inLanguageType.languages}"> <a href="Description.html"> <h1 th:text = "${language.name}">Java</h1></a>
 <!--            <img src="/pics/java.png" alt=""/>-->
+
             <p th:text = "${language.uses}">Java is a Object Oriented Programming (OOP) language. It's aight.</p>
-    </div></a>
-</div>
+    </div>
+
 </header>
 
 <!--<main>-->
