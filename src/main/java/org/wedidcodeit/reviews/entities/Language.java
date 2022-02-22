@@ -24,7 +24,6 @@ public class Language {
 
 
 
-    
     @ElementCollection
     private Collection<String> reviews;
 
