@@ -4,81 +4,94 @@
     <link rel="stylesheet" href="#Design.css">
     <meta charset="UTF-8">
     <title>Language Types</title>
-    <link rel="stylesheet" type="text/css" href="css/language-compare-layout.css">
-    <link rel="stylesheet" type="text/css" href="css/language-compare-style.css">
+    <link rel="stylesheet" type="text/css" href="/css/modified-layout.css">
+<!--    <link rel="stylesheet" type="text/css" href="/css/language-compare-style.css">-->
 
 
 </head>
 
 <body>
 <header>
-    <h1> This is the language type template</h1>
+<!--    <h1> This is the language type template</h1>-->
 
-    <p th:text = "'The language type for this page is ' + ${inLanguageType.name}+'.'">This is the language type. Below are the languages that fall under this category</p>
+<!--    <p th:text = "'The language type for this page is ' + ${inLanguageType.name}+'.'">This is the language type. Below are the languages that fall under this category</p>-->
+<!--    <div class="hero">-->
+<!--        <nav>-->
+
+<!--            <img src="pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!"/>-->
+<!--        </nav>-->
+<!--    </div>-->
     <div class="hero">
-        <nav>
-
-            <img src="pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!"/>
+        <nav class = "flex-item navigation-links">
+            <a href="index.html"> <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!">
         </nav>
-    </div>
+</header>
+</div>
+<div class="container1">
+    <a href="Descprition.html">
+        <div class="box" th:each="language: ${inLanguageType.languages}"> <h1 th:text = "${language.name}">Java</h1>
+<!--            <img src="/pics/java.png" alt=""/>-->
+            <p th:text = "${language.uses}">Java is a Object Oriented Programming (OOP) language. It's aight.</p>
+    </div></a>
+</div>
 </header>
 
-<main>
+<!--<main>-->
 
-    <p> This is where the different languages within the language type --> <a th:text = "${inLanguageType.name}">LanguageType</a> <-- should be.</p>
-    <ul>
+<!--    <p> This is where the different languages within the language type &ndash;&gt; <a th:text = "${inLanguageType.name}">LanguageType</a> <&#45;&#45; should be.</p>-->
+<!--    <ul>-->
 
-        <li th:each="language: ${inLanguage}"  th:text = "${language.name}  th:text = ${language.uses}">Sample Language type Title</li>
-        <li th:each="language: ${inLanguage}"  th:text = "${language.uses}">Sample Language type description</li>
-
-
-    </ul>
-    <p> *****Below should show a list of <a th:text = "${inLanguageType.name}"></a> languages.****</p>
-
-    <ul>
-        <li th:each = "languages:${inLanguageType.languages}" th:text= "${languages.name}"> This is the name of the language </li>
-
-    </ul>
+<!--        <li th:each="language: ${inLanguage}"  th:text = "${language.name}  th:text = ${language.uses}">Sample Language type Title</li>-->
+<!--        <li th:each="language: ${inLanguage}"  th:text = "${language.uses}">Sample Language type description</li>-->
 
 
-    <div th:each="languages : ${inLanguages}">
-    <span th:switch="${languages.languageType}">
-        <p th:case="'interpretive'">Interpretive Languages: <th:block th:text="${languages.name}">interpretive language name</th:block></p>
-        <p th:case="'compiled'">Compiled Languages:<th:block th:text="${languages.name}">compiled language name</th:block></p>
-        <p th:case="*">Other language</p>
-    </span>
-    </div>
+<!--    </ul>-->
+<!--    <p> *****Below should show a list of <a th:text = "${inLanguageType.name}"></a> languages.****</p>-->
+
+<!--    <ul>-->
+<!--        <li th:each = "languages:${inLanguageType.languages}" th:text= "${languages.name}"> This is the name of the language </li>-->
+
+<!--    </ul>-->
 
 
+<!--    <div th:each="languages : ${inLanguages}">-->
+<!--    <span th:switch="${languages.languageType}">-->
+<!--        <p th:case="'interpretive'">Interpretive Languages: <th:block th:text="${languages.name}">interpretive language name</th:block></p>-->
+<!--        <p th:case="'compiled'">Compiled Languages:<th:block th:text="${languages.name}">compiled language name</th:block></p>-->
+<!--        <p th:case="*">Other language</p>-->
+<!--    </span>-->
+<!--    </div>-->
 
 
 
 
 
-</main>
 
-<div class="container1">
 
-    <div class="box1">
+<!--</main>-->
 
-        <h2>Java</h2>
-        <img src="/pics/java.png" alt=""/>
+<!--<div class="container1">-->
 
-        <p>
-            Companies all across the world use and depend on Java programmers.
-        </p>
-    </div>
-    <div class="box2"><h2>C# (C Sharp)</h2>
-        <p><img src="/pics/cSharp.png" alt=""/>
-        </p>
-        C# is a Object Oriented Programming (OOP) language. It's like Java but sharper.
-    </div>
+<!--    <div class="box1">-->
 
-    <div class="box3"><h2>Python</h2>
-        <p><img src="/pics/python.png" alt=""/></p>
-        Python is pretty neat. It does stuff. Amazing. Wow.
-    </div>
-</div>
+<!--        <h2>Java</h2>-->
+<!--        <img src="/pics/java.png" alt=""/>-->
+
+<!--        <p>-->
+<!--            Companies all across the world use and depend on Java programmers.-->
+<!--        </p>-->
+<!--    </div>-->
+<!--    <div class="box2"><h2>C# (C Sharp)</h2>-->
+<!--        <p><img src="/pics/cSharp.png" alt=""/>-->
+<!--        </p>-->
+<!--        C# is a Object Oriented Programming (OOP) language. It's like Java but sharper.-->
+<!--    </div>-->
+
+<!--    <div class="box3"><h2>Python</h2>-->
+<!--        <p><img src="/pics/python.png" alt=""/></p>-->
+<!--        Python is pretty neat. It does stuff. Amazing. Wow.-->
+<!--    </div>-->
+<!--</div>-->
 
 </body>
 </html>

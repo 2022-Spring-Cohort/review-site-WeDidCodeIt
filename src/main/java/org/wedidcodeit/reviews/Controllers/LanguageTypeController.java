@@ -36,10 +36,10 @@ public class LanguageTypeController {
             model.addAttribute("inLanguageType", tempLanguageType.get());
         }
 
-        Optional<Language> tempLanguage = languageRepo.findById(id);
-        if (tempLanguage.isPresent()) {
-            model.addAttribute("inLanguage", tempLanguage.get());
-        }
+//        Optional<Language> tempLanguage = languageRepo.findById(id);
+//        if (tempLanguage.isPresent()) {
+//            model.addAttribute("inLanguage", tempLanguage.get());
+//        }
         return "LanguageTypeTemplate";
     }
 
