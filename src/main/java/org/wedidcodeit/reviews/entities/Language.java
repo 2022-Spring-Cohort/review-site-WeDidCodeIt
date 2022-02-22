@@ -22,8 +22,9 @@ public class Language {
     @ManyToOne
     private LanguageType languageType;
 
-    private String languageTypeString  = languageType.toString();
 
+
+    
     @ElementCollection
     private Collection<String> reviews;
 
