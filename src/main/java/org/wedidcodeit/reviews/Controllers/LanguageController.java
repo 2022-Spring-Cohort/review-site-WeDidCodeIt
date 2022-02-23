@@ -1,8 +1,10 @@
 package org.wedidcodeit.reviews.Controllers;
 import org.springframework.web.bind.annotation.*;
+import org.wedidcodeit.reviews.Repos.HashtagRepository;
 import org.wedidcodeit.reviews.Repos.LanguageRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.wedidcodeit.reviews.entities.Hashtag;
 import org.wedidcodeit.reviews.entities.Language;
 import org.wedidcodeit.reviews.entities.LanguageType;
 
@@ -12,6 +14,7 @@ import java.util.Optional;
 @Controller
 public class LanguageController {
     private LanguageRepository languageRepo;
+    private HashtagRepository hashtagRepo;
     public LanguageController(LanguageRepository languageRepo) {
         this.languageRepo = languageRepo;
     }
@@ -20,7 +23,7 @@ public class LanguageController {
     @RequestMapping("/languagetypes/languages/")
     public String showLanguagesTemplate(Model model, @PathVariable long id) {
         model.addAttribute("inLanguage", languageRepo.findById(id).get());
-        return "LanguagesTemplate";
+        return "LanguageDescriptionTemplate";
     }
 
     @GetMapping("/languagetypes/languages/{id}")
@@ -30,16 +33,16 @@ public class LanguageController {
         {
             model.addAttribute("inLanguage", tempLanguage.get());
         }
-        return "LanguagesTemplate";
+        return "LanguageDescriptionTemplate";
     }
 
-    @RequestMapping("/languagetypes/language/{name}")
+    @RequestMapping("/languagetypes/languages/{id}/{name}")
     public String showLanguagesByName(Model model, @PathVariable String name) {
         Optional<Language> tempLanguage = languageRepo.findByNameIgnoreCase(name);
         if (tempLanguage.isPresent()) {
             model.addAttribute("inLanguage", tempLanguage.get());
         }
-        return "LanguageTemplate";
+        return "LanguageDescriptionTemplate";
     }
 
     @PostMapping("/languagetypes/languages/{id}")
@@ -49,6 +52,15 @@ public class LanguageController {
         languageRepo.save(language);
         return "redirect:/languages/"+ id;
     }
+
+    @GetMapping ("/languagetypes/languages/{id}/addhashtag")
+    public String addHashTag (@PathVariable long id, @RequestParam String hashtag){
+        Hashtag hashtag1 = new Hashtag(hashtag);
+        hashtag1.addLanguage(languageRepo.findById(id).get());
+        hashtagRepo.save(hashtag1);
+        return "redirect:/languagetypes/languages/"+id+"/addhashtag";
+    }
+
 
 
 

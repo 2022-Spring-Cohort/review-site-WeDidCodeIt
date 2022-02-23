@@ -2,6 +2,7 @@ package org.wedidcodeit.reviews.entities;
 
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
@@ -10,6 +11,9 @@ public class Language {
     @GeneratedValue
     private long id;
     private String name;
+
+    @ManyToMany (mappedBy = "languages")
+    Collection <Hashtag> hashtags;
 
     private boolean isFrontEnd;
     private boolean isBackEnd;
@@ -35,12 +39,18 @@ public class Language {
         this.inventor = inventor;
         this.uses = uses;
         this.languageType = languageType;
+        this.hashtags = new ArrayList<>();
 
     }
 
 
     private Language(){
 
+    }
+
+
+    public Collection<Hashtag> getHashtags() {
+        return hashtags;
     }
 
     public double getAverageSalary() {
