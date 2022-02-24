@@ -22,13 +22,13 @@ public class LanguageController {
 
 
 
-    @RequestMapping("/languagetypes/languages/{id}")
+    @RequestMapping("/languages/{id}")
     public String showLanguagesTemplate(Model model, @PathVariable long id) {
         model.addAttribute("inLanguage", languageRepo.findById(id).get());
         return "LanguageDescriptionTemplate";
     }
 
-    @GetMapping("/languagetypes/languages/{id}")
+    @GetMapping("/languages/{id}")
     public String showLanguageTemplate(Model model, @PathVariable long id) {
         Optional<Language> tempLanguage = languageRepo.findById(id);
         if (tempLanguage.isPresent())
