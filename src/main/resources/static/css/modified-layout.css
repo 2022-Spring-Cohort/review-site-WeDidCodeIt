@@ -18,7 +18,7 @@ ol {
     align-items: flex-end;
 }
 
-/////////////////////////
+
 .table-dark{
         border-collapse: collapse;
         margin: 25px 0;
@@ -38,7 +38,7 @@ ol {
     font-weight: bold;
     color: #009879;
 }
-/////////////
+
 
 body {
   background-color: rgb(87, 25, 25);
@@ -48,6 +48,7 @@ body {
 
 img {
   width: 100px;
+  height:65.7px;
   border-radius: 10px;
 }
 .descriptPic{

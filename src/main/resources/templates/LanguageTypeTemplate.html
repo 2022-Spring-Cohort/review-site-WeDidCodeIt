@@ -40,7 +40,7 @@
         </thead>
                 <tbody class="styled-body">
                     <tr th:each = "languages:${inLanguageType.languages}">
-                        <td><a th:href="'/languagetypes/languages/'+${languages.id}"><img th:src="${languages.logoUrl}"></a></td>
+                        <td><a th:href="'/languages/'+${languages.id}"><img th:src="${languages.logoUrl}"></a></td>
                         <td th:text = "${languages.isFrontEnd}"></td>
                         <td th:text = "${languages.isBackEnd}"></td>
                         <td th:text = "'$'+${languages.averageSalary}"></td>
