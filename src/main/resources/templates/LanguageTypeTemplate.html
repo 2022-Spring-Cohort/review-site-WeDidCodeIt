@@ -43,7 +43,7 @@
                         <td><a th:href="'/languages/'+${languages.id}"><img th:src="${languages.logoUrl}"></a></td>
                         <td th:text = "${languages.isFrontEnd}"></td>
                         <td th:text = "${languages.isBackEnd}"></td>
-                        <td th:text = "'$'+${languages.averageSalary}"></td>
+                        <td th:text = "'$'+${languages.averageSalary}+'0'"></td>
                         <td th:text = "${languages.inventor}"></td>
                         <td th:text = "${languages.uses}"></td>
                     </tr>
