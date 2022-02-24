@@ -15,12 +15,12 @@ import java.util.Optional;
 public class LanguageController {
     private LanguageRepository languageRepo;
     private HashtagRepository hashtagRepo;
-    public LanguageController(LanguageRepository languageRepo) {
-        super();
+
+
+    public LanguageController(LanguageRepository languageRepo, HashtagRepository hashtagRepo) {
         this.languageRepo = languageRepo;
+        this.hashtagRepo = hashtagRepo;
     }
-
-
 
     @RequestMapping("/languages/{id}")
     public String showLanguagesTemplate(Model model, @PathVariable long id) {
@@ -39,10 +39,25 @@ public class LanguageController {
     }
 
     @PostMapping("/languages/{id}")
-    public String addReview(@PathVariable long id, @RequestParam String review){
+    public String addReview(@PathVariable long id, @RequestParam String review, @RequestParam String hashtag){
         Language language = languageRepo.findById(id).get();
         language.addReview(review);
         languageRepo.save(language);
+
+        Optional<Hashtag> hashtag1 = hashtagRepo.findByNameIgnoreCase(hashtag);
+        if(hashtag1.isPresent()){
+            hashtag1.get().addLanguage(language);
+            hashtagRepo.save(hashtag1.get());
+        }
+        else{
+            Hashtag hashtag2 = new Hashtag(hashtag);
+            hashtag2.addLanguage(language);
+            hashtagRepo.save(hashtag2);
+        }
+
+
+
+
         return "redirect:/languages/"+ id;
     }
 
@@ -56,21 +71,19 @@ public class LanguageController {
     }
 
 
-    @GetMapping ("/languagetypes/languages/{id}/addhashtag")
-    public String addHashTag (@PathVariable long id, @RequestParam String hashtag){
-        Hashtag hashtag1 = new Hashtag(hashtag);
-        hashtag1.addLanguage(languageRepo.findById(id).get());
-        hashtagRepo.save(hashtag1);
-        return "redirect:/languagetypes/languages/"+id+"/addhashtag";
+    @GetMapping ("/hashtags")
+    public String listHashtags (Model model){
+        model.addAttribute("hashtags", hashtagRepo.findAll());
+        return "hashtags";
     }
 
-    @PostMapping("/languagetypes/languages/{id}/addhashtag")
-    public String addRash(@PathVariable long id, @RequestParam String hashtag){
-        Language language = languageRepo.findById(id).get();
-        language.addReview(hashtag);
-        languageRepo.save(language);
-        return "redirect:/languagetypes/languages/"+id+"/addhashtag";
+    @GetMapping ("/hashtags/{id}")
+    public String listHashtags (Model model, @PathVariable long id){
+        model.addAttribute("hashtag", hashtagRepo.findById(id).get());
+        return "Hashtag";
     }
+
+
 
 
 
