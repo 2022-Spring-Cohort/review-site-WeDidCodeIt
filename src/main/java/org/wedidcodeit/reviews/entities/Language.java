@@ -5,18 +5,25 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
+
 public class Language {
+
     @Id
     @GeneratedValue
     private long id;
     private String name;
 
+
+    @ManyToMany (mappedBy = "languages")
+    Collection <Hashtag> hashtags;
+
+
+    private String logoUrl;
     private boolean isFrontEnd;
     private boolean isBackEnd;
     private double averageSalary;
     private String inventor;
     private String uses;
-    private String salary;
 
 
     @ManyToOne
@@ -27,7 +34,7 @@ public class Language {
     @ElementCollection
     private Collection<String> reviews;
 
-    public Language(String name, boolean isFrontEnd, boolean isBackEnd, double averageSalary, String inventor, String uses, LanguageType languageType) {
+    public Language(String name, boolean isFrontEnd, boolean isBackEnd, double averageSalary, String inventor, String uses, LanguageType languageType, String logoUrl) {
         this.name = name;
         this.isFrontEnd = isFrontEnd;
         this.isBackEnd = isBackEnd;
@@ -35,7 +42,7 @@ public class Language {
         this.inventor = inventor;
         this.uses = uses;
         this.languageType = languageType;
-
+        this.logoUrl = logoUrl;
     }
 
 
@@ -73,9 +80,6 @@ public class Language {
         return isBackEnd;
     }
 
-    public String getSalary() {
-        return salary;
-    }
 
     public LanguageType getLanguageType() {
         return languageType;
@@ -88,10 +92,8 @@ public class Language {
         reviews.add(review);
     }
 
-    public String isSalary() { return salary; }
 
-
-
-
-
+    public String getLogoUrl() {
+        return logoUrl;
+    }
 }

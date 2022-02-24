@@ -4,75 +4,30 @@
     <link rel="stylesheet" href="#Design.css">
     <meta charset="UTF-8">
     <title>Language Types</title>
-    <link rel="stylesheet" type="text/css" href="css/language-compare-layout.css">
-    <link rel="stylesheet" type="text/css" href="css/language-compare-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../css/index-layout.css" th:href="@{/css/index-layout.css}" />
+
 </head>
 <body>
 <header>
-
-<h1> Here is a list of programming language types.</h1>
-    <section class = "languageTypes">
-        <ul>
-            <li th:each="languageType: ${languageTypes}" ><a th:text = "${languageType.name}" th:href = "'/languagetypes/' + ${languageType.id}">Sample Language type Title> Stuff</a></li>
-        </ul>
-    </section>
     <div class="hero">
+        <nav class = "flex-item navigation-links">
+            <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!">
 
-        <nav>
-
-            <img src="pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!"/>
         </nav>
     </div>
-
 </header>
+</div>
 
-<main>
+<div class="container">
+<a  th:href = "'/languagetypes/' + ${languageType.id}"
+<div class="box" th:each="languageType: ${languageTypes}">
+    <h1 th:text = "${languageType.name}">NameTypes</h1>
+    <img src="/pics/compiledcode.jpg" alt=""/>    <!--needs to have dynamic picture reference and/for pojo   -->
+    <p th:text ="${languageType.description}">description</p>
 
-<!--    Language language = new Language(42, "Java","name of the inventor",true ,false,false,true);-->
-
-
-<!--    These will be for language types like interpretive and compiled-->
-
-
-
-
-<!--      <h1 th:each="in @RequestMapping("/languagetypes{id}")
-        public String showLanguagesByType(Model model,@PathVariable String languageType){
-        Optional<LanguageType> tempLanguageType = languageTypeRepo.findByNameIgnoreCase(languageType);
-        if(tempLanguageType.isPresent()){
-        model.addAttribute("inLanguageType",tempLanguageType.get());
-        }
-        return "LanguageTypeTemplate";
-        }Language:${languages}"><a th:ref="'/books/'+${myLanguage.isBackEnd}"
-                                                 th:text="${myLanguage.isBackEnd}"></a>This is backend</a></h1>
-
--->
-
-
-
-</main>
-
-<div class="container1">
-
-    <div class="box1">
-
-        <h2>Java</h2>
-        <img src="/pics/java.png" alt=""/>
-
-        <p>
-            Companies all across the world use and depend on Java programmers.
-        </p>
-    </div>
-    <div class="box2"><h2>C# (C Sharp)</h2>
-        <p><img src="/pics/cSharp.png" alt=""/>
-        </p>
-        C# is a Object Oriented Programming (OOP) language. It's like Java but sharper.
-    </div>
-
-    <div class="box3"><h2>Python</h2>
-        <p><img src="/pics/python.png" alt=""/></p>
-        Python is pretty neat. It does stuff. Amazing. Wow.
-    </div>
+    </a></div>
 </div>
 
 </body>

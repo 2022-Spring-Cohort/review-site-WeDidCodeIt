@@ -43,5 +43,9 @@ public class LanguageTypeController {
         return "LanguageTypeTemplate";
     }
 
+    @RequestMapping("/LanguageTypesTemplate")
+    public String LanguageTypesTemplates() {
+        return "LanguageTypesTemplate";
+    }
 
 }

@@ -1,8 +1,10 @@
 package org.wedidcodeit.reviews.Controllers;
 import org.springframework.web.bind.annotation.*;
+import org.wedidcodeit.reviews.Repos.HashtagRepository;
 import org.wedidcodeit.reviews.Repos.LanguageRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.wedidcodeit.reviews.entities.Hashtag;
 import org.wedidcodeit.reviews.entities.Language;
 import org.wedidcodeit.reviews.entities.LanguageType;
 
@@ -12,9 +14,12 @@ import java.util.Optional;
 @Controller
 public class LanguageController {
     private LanguageRepository languageRepo;
+    private HashtagRepository hashtagRepo;
     public LanguageController(LanguageRepository languageRepo) {
+        super();
         this.languageRepo = languageRepo;
     }
+
 
 
     @RequestMapping("/languagetypes/languages/")
@@ -22,6 +27,7 @@ public class LanguageController {
         model.addAttribute("inLanguage", languageRepo.findById(id).get());
         return "LanguagesTemplate";
     }
+
 
     @GetMapping("/languagetypes/languages/{id}")
     public String showLanguageTemplate(Model model, @PathVariable long id) {
@@ -49,7 +55,13 @@ public class LanguageController {
         languageRepo.save(language);
         return "redirect:/languages/"+ id;
     }
-
+    @GetMapping ("/languagetypes/languages/{id}/addhashtag")
+    public String addHashTag (@PathVariable long id, @RequestParam String hashtag){
+        Hashtag hashtag1 = new Hashtag(hashtag);
+        hashtag1.addLanguage(languageRepo.findById(id).get());
+        hashtagRepo.save(hashtag1);
+        return "redirect:/languagetypes/languages/"+id+"/addhashtag";
+    }
 
 
 }

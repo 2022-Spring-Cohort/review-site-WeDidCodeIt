@@ -4,81 +4,66 @@
     <link rel="stylesheet" href="#Design.css">
     <meta charset="UTF-8">
     <title>Language Types</title>
-    <link rel="stylesheet" type="text/css" href="css/language-compare-layout.css">
-    <link rel="stylesheet" type="text/css" href="css/language-compare-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link rel="stylesheet" type="text/css" href="/css/modified-layout.css">
 
 </head>
 
 <body>
 <header>
-    <h1> This is the language type template</h1>
-
-    <p th:text = "'The language type for this page is ' + ${inLanguageType.name}+'.'">This is the language type. Below are the languages that fall under this category</p>
     <div class="hero">
-        <nav>
-
-            <img src="pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!"/>
+        <nav class = "flex-item navigation-links">
+            <a href="/"> <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!">
+            </a>
         </nav>
     </div>
+
 </header>
-
-<main>
-
-    <p> This is where the different languages within the language type --> <a th:text = "${inLanguageType.name}">LanguageType</a> <-- should be.</p>
-    <ul>
-
-        <li th:each="language: ${inLanguage}"  th:text = "${language.name}  th:text = ${language.uses}">Sample Language type Title</li>
-        <li th:each="language: ${inLanguage}"  th:text = "${language.uses}">Sample Language type description</li>
-
-
-    </ul>
-    <p> *****Below should show a list of <a th:text = "${inLanguageType.name}"></a> languages.****</p>
-
-    <ul>
-        <li th:each = "languages:${inLanguageType.languages}" th:text= "${languages.name}"> This is the name of the language </li>
-
-    </ul>
-
-
-    <div th:each="languages : ${inLanguages}">
-    <span th:switch="${languages.languageType}">
-        <p th:case="'interpretive'">Interpretive Languages: <th:block th:text="${languages.name}">interpretive language name</th:block></p>
-        <p th:case="'compiled'">Compiled Languages:<th:block th:text="${languages.name}">compiled language name</th:block></p>
-        <p th:case="*">Other language</p>
-    </span>
-    </div>
-
-
-
-
-
-
-
-</main>
-
-<div class="container1">
-
-    <div class="box1">
-
-        <h2>Java</h2>
-        <img src="/pics/java.png" alt=""/>
-
-        <p>
-            Companies all across the world use and depend on Java programmers.
-        </p>
-    </div>
-    <div class="box2"><h2>C# (C Sharp)</h2>
-        <p><img src="/pics/cSharp.png" alt=""/>
-        </p>
-        C# is a Object Oriented Programming (OOP) language. It's like Java but sharper.
-    </div>
-
-    <div class="box3"><h2>Python</h2>
-        <p><img src="/pics/python.png" alt=""/></p>
-        Python is pretty neat. It does stuff. Amazing. Wow.
-    </div>
 </div>
+
+
+<div class="container">
+    <div class="row">
+        <h1> List of languages</h1>
+    </div>
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>FrontEnd</th>
+                <th>BackEnd</th>
+                <th>AverageSalary</th>
+                <th>Inventor</th>
+                <th>uses</th>
+            </tr>
+        </thead>
+                <tbody class="styled-body">
+                    <tr th:each = "languages:${inLanguageType.languages}">
+                        <td><a th:href="'/languagetypes/languages/'+${languages.id}"><img th:src="${languages.logoUrl}"></a></td>
+                        <td th:text = "${languages.isFrontEnd}"></td>
+                        <td th:text = "${languages.isBackEnd}"></td>
+                        <td th:text = "'$'+${languages.averageSalary}"></td>
+                        <td th:text = "${languages.inventor}"></td>
+                        <td th:text = "${languages.uses}"></td>
+                    </tr>
+                </tbody>
+    </table>
+</div>
+
+
+<!--<div class="container1">-->
+<!--    <div class="box" th:each="language: ${inLanguageType.languages}">-->
+
+
+<!--        <p th:text = "${language.name}">Java is a Object Oriented Programming (OOP) language. It's aight.</p>-->
+
+<!--        <p th:text = "${language.uses}">Java is a Object Oriented Programming (OOP) language. It's aight.</p>-->
+<!--        &lt;!&ndash;            <img th:src="/pics/+'${language.name}'+.png" alt="WE DID CODE IT!!!"/>&ndash;&gt;-->
+
+<!--    </div>-->
+<!--</div>-->
+
 
 </body>
 </html>
