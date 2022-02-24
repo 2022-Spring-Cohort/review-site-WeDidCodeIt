@@ -17,6 +17,7 @@
 <main>
     
     <div class="container">
+<<<<<<< HEAD
         <a th:each="languageType: ${languageTypes}" th:href = "'/languagetypes/' + ${languageType.id}">
             <div class="box" >
                 <h1 th:text = "${languageType.name}">NameTypes</h1>
@@ -24,6 +25,14 @@
                 <p th:text ="${languageType.description}">description</p>
             </div>
         </a>
+=======
+        <a  th:href = "'/languagetypes/' + ${languageTypes.id}">
+            <div class="box" th:each="languageType: ${languageTypes}">
+                <h1 th:text = "${languageType.name}">NameTypes</h1>
+                <img th:src="${languageType.logoTypeUrl}">    <!--needs to have dynamic picture reference and/for pojo   -->
+                <p th:text ="${languageType.description}">description</p>
+            </div></a>
+>>>>>>> 6e7e687cc1e68e07ea9b0ac00075d1b2d216b1cd
     </div>
 
 </main>

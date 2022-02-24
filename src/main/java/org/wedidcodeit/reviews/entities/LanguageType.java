@@ -14,11 +14,13 @@ public class LanguageType {
     private String name;
     private String uses;
     private String description;
+    private String logoTypeUrl;
 
-    public LanguageType( String name, String uses, String description) {
+    public LanguageType( String name, String uses, String description, String logoTypeUrl) {
         this.name = name;
         this.uses = uses;
         this.description = description;
+        this.logoTypeUrl = logoTypeUrl;
     }
 
     @ElementCollection
@@ -60,5 +62,8 @@ public class LanguageType {
 
     public Collection<Language> getLanguages() {
         return languages;
+    }
+    public String getLogoTypeUrl(){
+        return logoTypeUrl;
     }
 }
