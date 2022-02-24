@@ -17,7 +17,7 @@
     <div class="hero">
         <nav>
             <!--This will break once on an actual server-->
-            <a href ="http://localhost:8080">
+            <a href ="/">
                 <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!">
             </a>
         </nav>
@@ -29,6 +29,7 @@
             <section id = "flex-item language-compare">
 
             <h1 class="title" th:text = "${language.name}">This is the language being compared</h1>
+               <div class="imgdiv"> <img th:src="${language.logoUrl}"></div>
 
 
             <div class="parent">
