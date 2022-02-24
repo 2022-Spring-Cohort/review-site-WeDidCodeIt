@@ -44,6 +44,7 @@ public class Language {
         this.uses = uses;
         this.languageType = languageType;
         this.logoUrl = logoUrl;
+        this.reviews= new ArrayList<>();
     }
 
 

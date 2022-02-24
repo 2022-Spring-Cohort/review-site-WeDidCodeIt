@@ -49,9 +49,16 @@
                     <textarea id = "review" name = "review" rows="4" cols = "60"></textarea><br>
                     <input type = "submit" value="Submit">
                 </form>
+<p>List of reviews below:</p>
+                <ul>
+
+                    <li th:each="review:${language.reviews}" th:text="${review}"></li>
+                </ul>
 
 
-                <p> <em>This is a note. Need to add list of reviews below as updated</em></p>
+
+
+
 
 
 <!--            </section>-->

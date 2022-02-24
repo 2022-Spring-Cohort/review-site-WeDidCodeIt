@@ -26,7 +26,7 @@
             </div>
         </a>
 =======
-        <a  th:href = "'/languagetypes/' + ${languageTypes.id}">
+        <a  th:href = "'/languagetypes/' + ${languageType.id}">
             <div class="box" th:each="languageType: ${languageTypes}">
                 <h1 th:text = "${languageType.name}">NameTypes</h1>
                 <img th:src="${languageType.logoTypeUrl}">    <!--needs to have dynamic picture reference and/for pojo   -->
