@@ -39,7 +39,7 @@
             </tr>
         </thead>
                 <tbody class="styled-body">
-                    <tr th:each = "languages:${inLanguageType.languages}">
+                    <tr th:each = "languages:${inLanguageType.languages}"bgcolor="white">
                         <td><a th:href="'/languages/'+${languages.id}"><img th:src="${languages.logoUrl}"></a></td>
                         <td th:text = "${languages.isFrontEnd}"></td>
                         <td th:text = "${languages.isBackEnd}"></td>
