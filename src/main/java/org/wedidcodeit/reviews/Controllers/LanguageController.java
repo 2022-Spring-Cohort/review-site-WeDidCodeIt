@@ -61,6 +61,15 @@ public class LanguageController {
         return "redirect:/languagetypes/languages/"+id+"/addhashtag";
     }
 
+    @PostMapping("/languagetypes/languages/{id}/addhashtag")
+    public String addRash(@PathVariable long id, @RequestParam String hashtag){
+        Language language = languageRepo.findById(id).get();
+        language.addReview(hashtag);
+        languageRepo.save(language);
+        return "redirect:/languagetypes/languages/"+id+"/addhashtag";
+    }
+
+
 
 
 
