@@ -16,8 +16,10 @@ public class LanguageController {
     private LanguageRepository languageRepo;
     private HashtagRepository hashtagRepo;
     public LanguageController(LanguageRepository languageRepo) {
+        super();
         this.languageRepo = languageRepo;
     }
+
 
 
     @RequestMapping("/languagetypes/languages/")
@@ -33,11 +35,7 @@ public class LanguageController {
         {
             model.addAttribute("language", tempLanguage.get());
         }
-//<<<<<<< HEAD
-//        return "LanguageTemplate";
-//=======
         return "LanguageDescriptionTemplate";
-//>>>>>>> 73cddcd7692a68dd19e626ce29ec3aa25b7db0d5
     }
 
     @RequestMapping("/languagetypes/languages/{id}/{name}")
@@ -56,7 +54,6 @@ public class LanguageController {
         languageRepo.save(language);
         return "redirect:/languages/"+ id;
     }
-
     @GetMapping ("/languagetypes/languages/{id}/addhashtag")
     public String addHashTag (@PathVariable long id, @RequestParam String hashtag){
         Hashtag hashtag1 = new Hashtag(hashtag);
