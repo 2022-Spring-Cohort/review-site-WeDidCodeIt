@@ -23,8 +23,8 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String...args) throws Exception{
-        LanguageType interpretive = new LanguageType("Interpretive", "Temp", "Generally interpreted without compiling a program into machine instructions. It is one where the instructions are not directly executed by the target machine, but instead read and executed by some other program.");
-        LanguageType compiled = new LanguageType("Compiled", "Temp", "Compiled languages are converted directly into machine code that the processor can execute. As a result, they tend to be faster and more efficient to execute than interpreted languages.");
+        LanguageType interpretive = new LanguageType("Interpretive", "Temp", "Generally interpreted without compiling a program into machine instructions. It is one where the instructions are not directly executed by the target machine, but instead read and executed by some other program.","/pics/interpcode.jpg");
+        LanguageType compiled = new LanguageType("Compiled", "Temp", "Compiled languages are converted directly into machine code that the processor can execute. As a result, they tend to be faster and more efficient to execute than interpreted languages.","/pics/compiledcode.jpg");
         languageTypeRepo.save(interpretive);
         languageTypeRepo.save(compiled);
         Language java = new Language("Java",false,true ,79000,"James Gosling","Temp", compiled,"/pics/java.png");
