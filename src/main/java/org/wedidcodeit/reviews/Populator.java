@@ -23,8 +23,8 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String...args) throws Exception{
-        LanguageType interpretive = new LanguageType("interpretive", "Temp", "Temp");
-        LanguageType compiled = new LanguageType("compiled", "Temp", "Temp");
+        LanguageType interpretive = new LanguageType("Interpretive", "Temp", "Generally interpreted without compiling a program into machine instructions. It is one where the instructions are not directly executed by the target machine, but instead read and executed by some other program.");
+        LanguageType compiled = new LanguageType("Compiled", "Temp", "Compiled languages are converted directly into machine code that the processor can execute. As a result, they tend to be faster and more efficient to execute than interpreted languages.");
         languageTypeRepo.save(interpretive);
         languageTypeRepo.save(compiled);
         Language java = new Language("Java",false,true ,79000,"James Gosling","Temp", compiled,"/pics/java.png");
@@ -40,7 +40,6 @@ public class Populator implements CommandLineRunner {
         languageRepo.save(new Language( "MatLab", true, true, 101000, "Cleve Moler", "Temp", interpretive,""));
         languageRepo.save(new Language( "R",false, true, 91000, "Robert Gentleman", "Temp", interpretive,""));
         languageRepo.save(new Language( "HTML/CSS", true, false, 68000, "World Wide Web Consortium", "Temp", interpretive,""));
-
 
 
         Hashtag hashtag1 = new Hashtag("EasyToUse");

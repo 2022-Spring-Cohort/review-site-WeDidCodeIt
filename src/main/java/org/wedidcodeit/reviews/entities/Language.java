@@ -2,6 +2,7 @@ package org.wedidcodeit.reviews.entities;
 
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
@@ -48,6 +49,11 @@ public class Language {
 
     private Language(){
 
+    }
+
+
+    public Collection<Hashtag> getHashtags() {
+        return hashtags;
     }
 
     public double getAverageSalary() {

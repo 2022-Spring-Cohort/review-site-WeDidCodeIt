@@ -2,6 +2,22 @@ package org.wedidcodeit.reviews.Repos;
 
 import org.springframework.data.repository.CrudRepository;
 import org.wedidcodeit.reviews.entities.Hashtag;
+import org.wedidcodeit.reviews.entities.Language;
 
-public interface HashtagRepository extends CrudRepository<Hashtag, Long> {
+import java.util.Optional;
+
+public interface HashtagRepository extends CrudRepository<Hashtag,Long> {
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

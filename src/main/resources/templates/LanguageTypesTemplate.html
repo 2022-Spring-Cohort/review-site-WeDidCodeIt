@@ -4,31 +4,28 @@
     <link rel="stylesheet" href="#Design.css">
     <meta charset="UTF-8">
     <title>Language Types</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="all"
-          href="../../css/index-layout.css" th:href="@{/css/index-layout.css}" />
-
+    <link rel="stylesheet" type="text/css" href="/css/index-layout.css">
 </head>
 <body>
 <header>
     <div class="hero">
         <nav class = "flex-item navigation-links">
             <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!">
-
         </nav>
     </div>
 </header>
-</div>
+<main>
+    <div class="container">
+        <a  th:href = "'/languagetypes/' + ${languageType.id}"
+        <div class="box" th:each="languageType: ${languageTypes}">
+            <h1 th:text = "${languageType.name}">NameTypes</h1>
+            <img src="/pics/compiledcode.jpg" alt=""/>    <!--needs to have dynamic picture reference and/for pojo   -->
+            <p th:text ="${languageType.description}">description</p>
 
-<div class="container">
-<a  th:href = "'/languagetypes/' + ${languageType.id}"
-<div class="box" th:each="languageType: ${languageTypes}">
-    <h1 th:text = "${languageType.name}">NameTypes</h1>
-    <img src="/pics/compiledcode.jpg" alt=""/>    <!--needs to have dynamic picture reference and/for pojo   -->
-    <p th:text ="${languageType.description}">description</p>
+            </a></div>
+    </div>
 
-    </a></div>
-</div>
+</main>
 
 </body>
 </html>
