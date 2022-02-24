@@ -4,12 +4,15 @@
     <link rel="stylesheet" href="#Design.css">
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="css/language-compare-layout.css">
-    <link rel="stylesheet" type="text/css" href="css/language-compare-style.css">
+    <link rel="stylesheet" type="text/css" href="/css/Description-layout.css">
+
+
+
 
 </head>
 
 <body>
+<<<<<<< HEAD
 <header>
     <div class="hero">
         <nav>
@@ -33,5 +36,65 @@
 
 </main>
 
+=======
+    <header>
+        <div class="hero">
+            <nav>
+<!--This will break once on an actual server-->
+                <a href ="http://localhost:8080">
+                <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!">
+                </a>
+            </nav>
+        </div>
+        </header>
+
+        <main>
+            <section id = "flex-item language-compare">
+
+            <h1 class="title" th:text = "${language.name}">This is the language being compared</h1>
+
+
+            <div class="parent">
+                <h2>Frontend?</h2>
+                <h2>Backend?</h2>
+                <h2>Main uses:</h2>
+                <h2>Salary:</h2>
+                <h2>Inventor:</h2>
+                <h2 th:text = " ${language.isFrontEnd}">True</h2>
+                <h2 th:text = "${language.isBackEnd}">This is backend</h2>
+                <h2 th:unless = "${language.isBackEnd == 'T'} ">This is frontend</h2>
+                <h2 th:text = "'$'+${language.averageSalary}+'0 per year'">Salary Space</h2>
+                <h2 th:text = "${language.inventor}">Inventor Space</h2>
+            </div>
+
+
+<!--            </section>-->
+
+<!--            -->
+<!--        </main>-->
+
+<!--    <div class="container1">-->
+<!--    -->
+<!--        <div class="box1">-->
+
+<!--            <h2>Java</h2>-->
+<!--            <img src="/pics/java.png" alt=""/>-->
+
+<!--<p>-->
+<!--    Companies all across the world use and depend on Java programmers.-->
+<!--</p>            -->
+<!--        </div>-->
+<!--        <div class="box2"><h2>C# (C Sharp)</h2>-->
+<!--            <p> <img src="/pics/cSharp.png" alt=""/>-->
+<!--            </p>-->
+<!--            C# is a Object Oriented Programming (OOP) language. It's like Java but sharper.-->
+<!--        </div>-->
+<!--        -->
+<!--        <div class="box3"><h2>Python</h2> <p> <img src="/pics/python.png" alt=""/>  </p>-->
+<!--            Python is pretty neat. It does stuff. Amazing. Wow.-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    -->
+>>>>>>> 4ce298f3f8729507bd7bd6f49be081fc62a07950
 </body>
 </html>
