@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="#Design.css">
     <meta charset="UTF-8">
-    <title>Language Types</title>
+    <title>Language Type</title>
     <link rel="stylesheet" type="text/css" href="/css/modified-layout.css">
 <!--    <link rel="stylesheet" type="text/css" href="/css/language-compare-style.css">-->
 
@@ -23,18 +23,24 @@
 <!--    </div>-->
     <div class="hero">
         <nav class = "flex-item navigation-links">
-            <a href="index.html"> <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!"> </a>
+            <a href="/"> <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!"> </a>
         </nav>
 
 </div>
 </header>
-<div class="container1">
 
-        <div class="box" th:each="language: ${inLanguageType.languages}"> <a href="Description.html"> <h1 th:text = "${language.name}">Java</h1></a>
-<!--            <img src="/pics/java.png" alt=""/>-->
+<h1>This page contains the languages under <a th:text = "${inLanguageType.name}+'.'"></a></h1>
+<div class="container1">
+        <div class="box" th:each="language: ${inLanguageType.languages}">
+
+
+            <p th:text = "${language.name}">Java is a Object Oriented Programming (OOP) language. It's aight.</p>
 
             <p th:text = "${language.uses}">Java is a Object Oriented Programming (OOP) language. It's aight.</p>
+<!--            <img th:src="/pics/+'${language.name}'+.png" alt="WE DID CODE IT!!!"/>-->
+
     </div>
+</div>div>
 
 </header>
 
