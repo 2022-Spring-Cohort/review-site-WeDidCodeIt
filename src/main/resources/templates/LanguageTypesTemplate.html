@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <link rel="stylesheet" href="#Design.css" />
-    <meta charset="UTF-8" />
+<head>
+    <link rel="stylesheet" href="#Design.css">
+    <meta charset="UTF-8">
     <title>Language Types</title>
-    <link rel="stylesheet" type="text/css" href="/css/index-layout.css" />
-  </head>
-  <body>
-    <header>
-      <div class="hero">
-        <nav class="flex-item navigation-links">
-          <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!" />
+    <link rel="stylesheet" type="text/css" href="/css/index-layout.css">
+</head>
+<body>
+<header>
+    <div class="hero">
+        <nav class = "flex-item navigation-links">
+            <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!">
         </nav>
-      </div>
-    </header>
-    <main>
-      <div class="container">
-        <a
-          th:each="languageType: ${languageTypes}"
-          th:href="'/languagetypes/' + ${languageType.id}"
-        >
-          <div class="box">
-            <h1 th:text="${languageType.name}">NameTypes</h1>
+    </div>
+</header>
+<main>
 
-            <img th:src="${languageType.logoTypeUrl}" />
-            <p th:text="${languageType.description}">description</p>
-          </div>
+    <div class="container">
+        <a th:each="languageType: ${languageTypes}" th:href = "'/languagetypes/' + ${languageType.id}">
+            <div class="box">
+                <h1 th:text = "${languageType.name}">NameTypes</h1>
+
+                <img th:src="${languageType.logoTypeUrl}">
+                <p th:text ="${languageType.description}">description</p>
+            </div>
         </a>
-      </div>
-    </main>
-  </body>
+    </div>
+</main>
+
+</body>
 </html>
