@@ -76,7 +76,15 @@ img {
 }
 .descriptPic{
   width: 500px;
-  
+}
+
+.CenterThis {
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+width:100%;
+
 }
 
 .container1{
@@ -91,6 +99,7 @@ img {
   text-decoration: none;
   width: 80%;
 }
+
 
 
 .box{

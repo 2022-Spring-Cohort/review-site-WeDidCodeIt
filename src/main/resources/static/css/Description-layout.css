@@ -11,7 +11,14 @@
     max-width: 100%;
     border-style: ridge;
   }
+.CenterThis {
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+width:100%;
 
+}
   
   body {
     background-color: #383840;
