@@ -22,7 +22,7 @@ public class LanguageController {
 
 
 
-    @RequestMapping("/languagetypes/languages/")
+    @RequestMapping("/languages/{id}")
     public String showLanguagesTemplate(Model model, @PathVariable long id) {
         model.addAttribute("inLanguage", languageRepo.findById(id).get());
         return "LanguageDescriptionTemplate";
@@ -61,6 +61,15 @@ public class LanguageController {
         hashtagRepo.save(hashtag1);
         return "redirect:/languagetypes/languages/"+id+"/addhashtag";
     }
+
+    @PostMapping("/languagetypes/languages/{id}/addhashtag")
+    public String addRash(@PathVariable long id, @RequestParam String hashtag){
+        Language language = languageRepo.findById(id).get();
+        language.addReview(hashtag);
+        languageRepo.save(language);
+        return "redirect:/languagetypes/languages/"+id+"/addhashtag";
+    }
+
 
 
 

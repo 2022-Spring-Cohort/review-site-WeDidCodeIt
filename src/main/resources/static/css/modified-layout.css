@@ -9,7 +9,11 @@
   max-width: 100%;
   border-style: ridge;
 }
-
+body {
+  background-color: #383840;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
 ol {
     display: flex;
     color: blue;
@@ -36,6 +40,7 @@ ol {
 }
 .table-dark tbody tr.styled-body {
     font-weight: bold;
+    
     color: #009879;
 }
 /////////////

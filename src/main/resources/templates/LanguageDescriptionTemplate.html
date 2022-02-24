@@ -9,20 +9,21 @@
 
 
 
-
 </head>
 
 <body>
-    <header>
-        <div class="hero">
-            <nav>
-<!--This will break once on an actual server-->
-                <a href ="http://localhost:8080">
+
+<header>
+    <div class="hero">
+        <nav>
+            <!--This will break once on an actual server-->
+            <a href ="http://localhost:8080">
                 <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!">
-                </a>
-            </nav>
-        </div>
-        </header>
+            </a>
+        </nav>
+    </div>
+</header>
+
 
         <main>
             <section id = "flex-item language-compare">
@@ -71,5 +72,17 @@
 <!--        </div>-->
 <!--    </div>-->
 <!--    -->
+
+                <form th:action="'languagetypes/languages/'+${language.id}" method="POST">
+                    <label for="review">Enter review:</label></br>
+                    <input type="text" id="review" name="review"></br>
+                    <input type = "submit" value="Submit">
+                    </label>
+
+                </form>
+
+
+                <p> <em>This is a note. Need to add list of reviews below as updated</em></p>
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 
 body {
-  background-color: #551919;
+  background-color: #383840;
   font-family: Arial, Helvetica, sans-serif;
   height: 100%;
 }
@@ -17,8 +17,7 @@ img {
   border: 5px;
   background-color: black;
   border:solid;
-  border-color: red;
-  border: #f7c873;
+  border: white;
   border-radius: 10px;
   max-width: 100%;
   border-style: ridge;
@@ -28,22 +27,29 @@ img {
 .container{
   border-radius: 200px;
   border: 1px;
-  background-color: #434343;
+  background-color: #66b6d2;
   padding: 10px auto;
   margin: 15% auto;
   text-decoration: none;
   width: 80%;
-
 }
 
 .box{
-  background-color: #a64452;
+  background-color: #8c888c;
   margin: 10px auto;
-  border: #f7c873;
+  margin-left:-2px;
+  border: white;
   border-radius: 10px;
   border-style: ridge;
   text-align:center;
   font-size:1.7em;
+  transition: 0.5s ease;
+  cursor:pointer;
+  }
+
+  .box:hover{
+  transform: scale(1.02);
+    box-shadow:5px 5px 15px rgba(0,0,0,0.6);
   }
 
 
