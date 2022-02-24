@@ -42,12 +42,16 @@
   }
 
 
-
+.imgdiv {
+display: flex;
+justify-content: center;
+}
 
 
   img {
     width: 100px;
     border-radius: 10px;
+
     
   }
   .descriptPic{

@@ -18,14 +18,14 @@
     
     <div class="container">
         <a th:each="languageType: ${languageTypes}" th:href = "'/languagetypes/' + ${languageType.id}">
-            <div class="box" >
+            <div class="box">
                 <h1 th:text = "${languageType.name}">NameTypes</h1>
-                <img src="/pics/compiledcode.jpg" alt=""/>    <!--needs to have dynamic picture reference and/for pojo   -->
+
+                <img th:src="${languageType.logoTypeUrl}">
                 <p th:text ="${languageType.description}">description</p>
             </div>
         </a>
     </div>
-
 </main>
 
 </body>
