@@ -7,8 +7,6 @@
     <link rel="stylesheet" type="text/css" href="/css/Description-layout.css">
 
 
-
-
 </head>
 
 <body>
@@ -17,7 +15,7 @@
     <div class="hero">
         <nav>
             <!--This will break once on an actual server-->
-            <a href ="/">
+            <a href="/">
                 <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!">
             </a>
         </nav>
@@ -25,65 +23,82 @@
 </header>
 
 
-        <main>
-            <section id = "flex-item language-compare">
+<main>
+    <section id="flex-item language-compare">
 
-            <h1 class="title" th:text = "${language.name}">This is the language being compared</h1>
-               <div class="imgdiv"> <img th:src="${language.logoUrl}"></div>
-
-
-            <div class="parent">
-                <h2>Frontend?</h2>
-                <h2>Backend?</h2>
-                <h2>Main uses:</h2>
-                <h2>Salary:</h2>
-                <h2>Inventor:</h2>
-                <h2 th:text = " ${language.isFrontEnd}">True</h2>
-                <h2 th:text = "${language.isBackEnd}">This is backend</h2>
-                <h2 th:unless = "${language.isBackEnd == 'T'} ">This is frontend</h2>
-                <h2 th:text = "'$'+${language.averageSalary}+'0 per year'">Salary Space</h2>
-                <h2 th:text = "${language.inventor}">Inventor Space</h2>
-            </div>
+        <h1 class="title" th:text="${language.name}">This is the language being compared</h1>
+        <div class="imgdiv"><img th:src="${language.logoUrl}"></div>
 
 
-<!--            </section>-->
+        <div class="parent">
+            <h2>Frontend?</h2>
+            <h2>Backend?</h2>
+            <h2>Main uses:</h2>
+            <h2>Salary:</h2>
+            <h2>Inventor:</h2>
+            <h2 th:text=" ${language.isFrontEnd}">True</h2>
+            <h2 th:text="${language.isBackEnd}">This is backend</h2>
+            <h2 th:unless="${language.isBackEnd == 'T'} ">This is frontend</h2>
+            <h2 th:text="'$'+${language.averageSalary}+'0 per year'">Salary Space</h2>
+            <h2 th:text="${language.inventor}">Inventor Space</h2>
+        </div>
 
-<!--            -->
-<!--        </main>-->
-
-<!--    <div class="container1">-->
-<!--    -->
-<!--        <div class="box1">-->
-
-<!--            <h2>Java</h2>-->
-<!--            <img src="/pics/java.png" alt=""/>-->
-
-<!--<p>-->
-<!--    Companies all across the world use and depend on Java programmers.-->
-<!--</p>            -->
-<!--        </div>-->
-<!--        <div class="box2"><h2>C# (C Sharp)</h2>-->
-<!--            <p> <img src="/pics/cSharp.png" alt=""/>-->
-<!--            </p>-->
-<!--            C# is a Object Oriented Programming (OOP) language. It's like Java but sharper.-->
-<!--        </div>-->
-<!--        -->
-<!--        <div class="box3"><h2>Python</h2> <p> <img src="/pics/python.png" alt=""/>  </p>-->
-<!--            Python is pretty neat. It does stuff. Amazing. Wow.-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    -->
-
-                <form th:action="'languagetypes/languages/'+${language.id}" method="POST">
-                    <label for="review">Enter review:</label></br>
-                    <input type="text" id="review" name="review"></br>
-                    <input type = "submit" value="Submit">
-                    </label>
-
-                </form>
+        <form th:action="'/languages/'+${language.id}" method="POST">
+            <label for="hastag">Enter hastag:</label><br>
+            <textarea id="hashtag" name="hashtag" rows="1" cols="60"></textarea><br>
+            <label for="review">Enter review:</label><br>
+            <textarea id="review" name="review" rows="4" cols="60"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
 
 
-                <p> <em>This is a note. Need to add list of reviews below as updated</em></p>
+        <p>List of reviews below:</p>
+        <ul>
+
+            <li th:each="review:${language.reviews}" th:text="${review}"></li>
+        </ul>
+
+        <p>List of hashtagsbelow:</p>
+        <ul>
+            <li th:each="hashtag:${language.hashtags}">
+
+                <a th:href="'/Hashtags/'+${hashtag.id}" th:text="${hashtag.name}"></a>
+
+
+            </li>
+
+
+        </ul>
+
+
+        <!--            </section>-->
+
+        <!--            -->
+        <!--        </main>-->
+
+        <!--    <div class="container1">-->
+        <!--    -->
+        <!--        <div class="box1">-->
+
+        <!--            <h2>Java</h2>-->
+        <!--            <img src="/pics/java.png" alt=""/>-->
+
+        <!--<p>-->
+        <!--    Companies all across the world use and depend on Java programmers.-->
+        <!--</p>            -->
+        <!--        </div>-->
+        <!--        <div class="box2"><h2>C# (C Sharp)</h2>-->
+        <!--            <p> <img src="/pics/cSharp.png" alt=""/>-->
+        <!--            </p>-->
+        <!--            C# is a Object Oriented Programming (OOP) language. It's like Java but sharper.-->
+        <!--        </div>-->
+        <!--        -->
+        <!--        <div class="box3"><h2>Python</h2> <p> <img src="/pics/python.png" alt=""/>  </p>-->
+        <!--            Python is pretty neat. It does stuff. Amazing. Wow.-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--    -->
+
 
 </body>
 </html>

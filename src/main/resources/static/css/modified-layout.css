@@ -21,6 +21,9 @@ ol {
     
     align-items: flex-end;
 }
+.uppercase {
+text-transform: capitalize;
+}
 
 .table-dark{
         border-collapse: collapse;
@@ -30,13 +33,35 @@ ol {
         min-width: 400px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 
+
 }
+h1 {
+text-align: right;
+}
+.title {
+
+   font-size: 69gitpx;
+   font-weight: 700;
+   text-decoration: underline;
+   font-family: Georgia, serif;
+   }
 .table-dark{
     background-color: #009879;
     color: #ffffff;
-    text-align: left;
+    text-align: center;
 
 }
+.styled-body {
+    font-weight: bold;
+    background-color: white;
+    justify-content: center;
+    justify-items: center;
+}
+
+td {
+  text-align: center;
+}
+/////////////
 
 .stayled-body{
 

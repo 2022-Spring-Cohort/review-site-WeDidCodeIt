@@ -25,25 +25,25 @@
 
 <div class="container">
     <div class="row">
-        <h1> List of languages</h1>
+        <div class="title"><h1> List of languages</h1></div>
     </div>
     <table class="table table-striped table-bordered">
-        <thead class="table-dark">
+        <thead >
             <tr>
                 <th>Name</th>
                 <th>FrontEnd</th>
                 <th>BackEnd</th>
                 <th>AverageSalary</th>
                 <th>Inventor</th>
-                <th>uses</th>
+                <th>Uses</th>
             </tr>
         </thead>
                 <tbody class="styled-body">
                     <tr th:each = "languages:${inLanguageType.languages}"bgcolor="white">
                         <td><a th:href="'/languages/'+${languages.id}"><img th:src="${languages.logoUrl}"></a></td>
-                        <td th:text = "${languages.isFrontEnd}"></td>
-                        <td th:text = "${languages.isBackEnd}"></td>
-                        <td th:text = "'$'+${languages.averageSalary}"></td>
+                        <td class="uppercase" th:text = "${languages.isFrontEnd}"></td>
+                        <td class="uppercase" th:text = "${languages.isBackEnd}"></td>
+                        <td th:text = "'$'+${languages.averageSalary}+'0'"></td>
                         <td th:text = "${languages.inventor}"></td>
                         <td th:text = "${languages.uses}"></td>
                     </tr>
