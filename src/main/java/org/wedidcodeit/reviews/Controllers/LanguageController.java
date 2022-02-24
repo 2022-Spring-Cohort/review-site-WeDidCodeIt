@@ -33,11 +33,11 @@ public class LanguageController {
         {
             model.addAttribute("language", tempLanguage.get());
         }
-<<<<<<< HEAD
-        return "LanguageTemplate";
-=======
+//<<<<<<< HEAD
+//        return "LanguageTemplate";
+//=======
         return "LanguageDescriptionTemplate";
->>>>>>> 73cddcd7692a68dd19e626ce29ec3aa25b7db0d5
+//>>>>>>> 73cddcd7692a68dd19e626ce29ec3aa25b7db0d5
     }
 
     @RequestMapping("/languagetypes/languages/{id}/{name}")
