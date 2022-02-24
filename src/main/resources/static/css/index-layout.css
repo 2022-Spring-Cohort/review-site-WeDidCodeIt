@@ -6,10 +6,13 @@ body {
 }
 
 img {
-  width: 200px;
-  height: 120px;
+  width: 100px;
   border-radius: 10px;
+}
 
+.box img{
+    width:200px;
+    height:120px;
 }
 
 .hero{
@@ -30,9 +33,9 @@ img {
   border: 1px;
   background-color: #66b6d2;
   padding: 10px auto;
-  margin: 15% auto;
+  margin: 5% auto;
   text-decoration: none;
-  width: 80%;
+  width: 60%;
 }
 
 .box{
