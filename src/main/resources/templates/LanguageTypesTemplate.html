@@ -17,7 +17,6 @@
 <main>
     
     <div class="container">
-
         <a th:each="languageType: ${languageTypes}" th:href = "'/languagetypes/' + ${languageType.id}">
             <div class="box">
                 <h1 th:text = "${languageType.name}">NameTypes</h1>
