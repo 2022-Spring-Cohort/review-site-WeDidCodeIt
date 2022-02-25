@@ -19,7 +19,7 @@
 </div>
 <p>Hashtags page</p>
 <ul>
-    <li th:each="hashtag:${hashtags}" >
+    <li class="button" th:each="hashtag:${hashtags}" >
         <a th:href="'/hashtags/'+${hashtag.id}" th:text="${hashtag.name}"></a>
     </li>
 </ul>
