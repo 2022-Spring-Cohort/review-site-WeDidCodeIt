@@ -30,22 +30,84 @@ public class Populator implements CommandLineRunner {
         Language java = new Language("Java",false,true ,79000,"James Gosling","Temp", compiled,"/pics/java.png");
         languageRepo.save(java);
 
-//        languageRepo.save(new Language(24, "Python","name of the inventor",true ,false,false,true));
-        languageRepo.save(new Language( "Kotlin", true, true,136000, "JetBrains", "Temp", compiled,"/pics/Kotlin.png"));
-        languageRepo.save(new Language( "Python", true, true, 72500, "Guido van Rossum", "Temp", interpretive,"/pics/python.png"));
-        languageRepo.save(new Language( "Swift", false, true, 96000, "Ted Kremenek", "Temp", compiled,"/pics/Swift.png"));
-        languageRepo.save(new Language( "C#", false, true, 68000, "Microsoft", "Temp", compiled,"/pics/CSharp.png"));
-        languageRepo.save(new Language( "Go", true, true, 92000, "Rob Pike", "Temp", compiled,"/pics/GO.png"));
-        languageRepo.save(new Language( "PHP", false, true, 81500, "Rasmus Ierdorf", "Temp", compiled,"/pics/php.png"));
-        languageRepo.save(new Language( "MatLab", true, true, 101000, "Cleve Moler", "Temp", interpretive,"/pics/mat.jpg"));
-        languageRepo.save(new Language( "R",false, true, 91000, "Robert Gentleman", "Temp", interpretive,"/pics/R.jpg"));
-        languageRepo.save(new Language( "HTML/CSS", true, false, 68000, "World Wide Web Consortium", "Temp", interpretive,"/pics/html.jpg"));
+        Language kotlin = new Language( "Kotlin", true, true,136000, "JetBrains", "Temp", compiled,"/pics/Kotlin.png");
+        languageRepo.save(kotlin);
+
+        Language python = new Language( "Python", true, true, 72500, "Guido van Rossum", "Temp", interpretive,"/pics/python.png");
+        languageRepo.save(python);
+
+        Language swift = new Language( "Swift", false, true, 96000, "Ted Kremenek", "Temp", compiled,"/pics/Swift.png");
+        languageRepo.save(swift);
+
+        Language cSharp = new Language( "C#", false, true, 68000, "Microsoft", "Temp", compiled,"/pics/CSharp.png");
+        languageRepo.save(cSharp);
+
+        Language go = (new Language( "Go", true, true, 92000, "Rob Pike", "Temp", compiled,"/pics/GO.png"));
+        languageRepo.save(go);
+
+        Language php = new Language( "PHP", false, true, 81500, "Rasmus Ierdorf", "Temp", compiled,"/pics/php.png");
+        languageRepo.save(php);
+
+        Language matLab = new Language( "MatLab", true, true, 101000, "Cleve Moler", "Temp", interpretive,"/pics/mat.jpg");
+        languageRepo.save(matLab);
+
+        Language r = new Language( "R",false, true, 91000, "Robert Gentleman", "Temp", interpretive,"/pics/R.jpg");
+        languageRepo.save(r);
+
+        Language htmlCSS = new Language( "HTML/CSS", true, false, 68000, "World Wide Web Consortium", "Temp", interpretive,"/pics/html.jpg");
+        languageRepo.save(htmlCSS);
 
 
         Hashtag hashtag1 = new Hashtag("EasyToUse");
         hashtag1.addLanguage(java);
-
         hashtagRepo.save(hashtag1);
+
+        Hashtag typeJava = new Hashtag("Compiled");
+        typeJava.addLanguage(java);
+        hashtagRepo.save(typeJava);
+
+        Hashtag typeKotlin = new Hashtag("Compiled");
+        typeKotlin.addLanguage(kotlin);
+        hashtagRepo.save(typeKotlin);
+
+        Hashtag typePython = new Hashtag("Interpretive");
+        typePython.addLanguage(python);
+        hashtagRepo.save(typePython);
+
+        Hashtag typeSwift = new Hashtag("Compiled");
+        hashtag1.addLanguage(swift);
+        hashtagRepo.save(typeSwift);
+
+        Hashtag typeCSharp= new Hashtag("Compiled");
+        typeSwift.addLanguage(cSharp);
+        hashtagRepo.save(typeCSharp);
+
+        Hashtag typeGo = new Hashtag("Compiled");
+        hashtag1.addLanguage(go);
+        hashtagRepo.save(typeGo);
+
+        Hashtag typePhp = new Hashtag("Compiled");
+        typeGo.addLanguage(php);
+        hashtagRepo.save(typePhp);
+
+        Hashtag typeMatlab = new Hashtag("Interpretive");
+        hashtag1.addLanguage(matLab);
+        hashtagRepo.save(typeMatlab);
+
+        Hashtag typeR = new Hashtag("Interpretive");
+        typeMatlab.addLanguage(r);
+        hashtagRepo.save(typeR);
+
+        Hashtag typeHTMLCSS = new Hashtag("Interpretive");
+        typeHTMLCSS.addLanguage(htmlCSS);
+        hashtagRepo.save(typeHTMLCSS);
+
+
+
+
+
+
+
     }
 
 }
