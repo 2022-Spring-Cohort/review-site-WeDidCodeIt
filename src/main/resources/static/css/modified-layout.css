@@ -3,8 +3,10 @@
 .hero{
   display: flex;
   justify-content: center;
+  border: 5px;
   background-color: black;
-  border: #f7c873;
+  border:solid;
+  border: white;
   border-radius: 10px;
   max-width: 100%;
   border-style: ridge;

@@ -1,16 +1,16 @@
 
 .hero{
-    display: flex;
-    justify-content: center;
-    border: 5px;   
-    background-color: black;
-    border:solid;
-    border-color: red;
-    border: #f7c873;
-    border-radius: 10px;
-    max-width: 100%;
-    border-style: ridge;
-  }
+  display: flex;
+  justify-content: center;
+  border: 5px;
+  background-color: black;
+  border:solid;
+  border: white;
+  border-radius: 10px;
+  max-width: 100%;
+  border-style: ridge;
+}
+
 .CenterThis {
 display: flex;
 justify-content: center;
