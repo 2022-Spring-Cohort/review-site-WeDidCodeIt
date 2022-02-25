@@ -27,7 +27,7 @@
     <section id="flex-item language-compare">
 
         <h1 class="title" th:text="${language.name}">This is the language being compared</h1>
-        <div class="imgdiv"><img th:src="${language.logoUrl}"></div>
+        <div class="imgdiv"><img class="img2" th:src="${language.logoUrl}"></div>
 
 
         <div class="parent">
@@ -60,7 +60,7 @@
         </ul>
         <h2>List of hashtags below:</h2>
         <ul>
-            <li th:each="hashtag:${language.hashtags}">
+            <li class="button" th:each="hashtag:${language.hashtags}">
 
                 <a th:href="'/hashtags/'+${hashtag.id}" th:text="${hashtag.name}"></a>
 

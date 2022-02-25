@@ -17,6 +17,8 @@ justify-content: center;
 flex-direction: column;
 align-items: center;
 width:100%;
+font-weight: bold;
+
 
 }
   
@@ -29,13 +31,15 @@ width:100%;
   .title {
   display: flex;
   justify-content: center;
-  font-size: 69gitpx;
+  font-size: 100px;
   font-weight: 700;
   text-decoration: underline;
   font-family: Georgia, serif;
   }
 
   .parent {
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-family: Georgia, serif;
   text-transform: uppercase;
   text-align: center;
@@ -47,13 +51,14 @@ width:100%;
   border-width:20px;
   border-style:double;
   border-color:#000000;
+  margin-bottom: 50px;
   }
 
 
 .imgdiv {
 display: flex;
 justify-content: center;
-padding: 50px;
+padding: 10px;
 }
 
 
@@ -63,7 +68,13 @@ padding: 50px;
 
     
   }
-  .descriptPic{
+
+   .img2 {
+      width: 300px;
+      border-radius: 10px;
+      margin-bottom: 50px;
+
+  .descriptPic {
     width: 500px;
     
   }
