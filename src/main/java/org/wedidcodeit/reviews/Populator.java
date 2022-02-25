@@ -62,45 +62,23 @@ public class Populator implements CommandLineRunner {
         hashtag1.addLanguage(java);
         hashtagRepo.save(hashtag1);
 
-        Hashtag typeJava = new Hashtag("Compiled");
-        typeJava.addLanguage(java);
-        hashtagRepo.save(typeJava);
 
-        Hashtag typeKotlin = new Hashtag("Compiled");
-        typeKotlin.addLanguage(kotlin);
-        hashtagRepo.save(typeKotlin);
+        Hashtag compiledHashtag = new Hashtag("Compiled");
+        compiledHashtag.addLanguage(java);
+        compiledHashtag.addLanguage(kotlin);
+        compiledHashtag.addLanguage(swift);
+        compiledHashtag.addLanguage(cSharp);
+        compiledHashtag.addLanguage(go);
+        compiledHashtag.addLanguage(php);
+        hashtagRepo.save(compiledHashtag);
 
-        Hashtag typePython = new Hashtag("Interpretive");
-        typePython.addLanguage(python);
-        hashtagRepo.save(typePython);
+        Hashtag interpretiveHashtag = new Hashtag("Interpretive");
+        interpretiveHashtag.addLanguage(python);
+        interpretiveHashtag.addLanguage(matLab);
+        interpretiveHashtag.addLanguage(r);
+        interpretiveHashtag.addLanguage(htmlCSS);
+        hashtagRepo.save(interpretiveHashtag );
 
-        Hashtag typeSwift = new Hashtag("Compiled");
-        hashtag1.addLanguage(swift);
-        hashtagRepo.save(typeSwift);
-
-        Hashtag typeCSharp= new Hashtag("Compiled");
-        typeSwift.addLanguage(cSharp);
-        hashtagRepo.save(typeCSharp);
-
-        Hashtag typeGo = new Hashtag("Compiled");
-        hashtag1.addLanguage(go);
-        hashtagRepo.save(typeGo);
-
-        Hashtag typePhp = new Hashtag("Compiled");
-        typeGo.addLanguage(php);
-        hashtagRepo.save(typePhp);
-
-        Hashtag typeMatlab = new Hashtag("Interpretive");
-        hashtag1.addLanguage(matLab);
-        hashtagRepo.save(typeMatlab);
-
-        Hashtag typeR = new Hashtag("Interpretive");
-        typeMatlab.addLanguage(r);
-        hashtagRepo.save(typeR);
-
-        Hashtag typeHTMLCSS = new Hashtag("Interpretive");
-        typeHTMLCSS.addLanguage(htmlCSS);
-        hashtagRepo.save(typeHTMLCSS);
 
 
 

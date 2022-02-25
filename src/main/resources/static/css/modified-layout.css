@@ -10,6 +10,9 @@
   border-radius: 10px;
   max-width: 100%;
   border-style: ridge;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top:8px;
 }
 body {
   background-color: #383840;

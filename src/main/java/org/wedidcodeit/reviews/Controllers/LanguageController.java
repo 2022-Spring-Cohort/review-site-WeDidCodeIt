@@ -49,7 +49,7 @@ public class LanguageController {
             hashtag1.get().addLanguage(language);
             hashtagRepo.save(hashtag1.get());
         }
-        else{
+        else {
             Hashtag hashtag2 = new Hashtag(hashtag);
             hashtag2.addLanguage(language);
             hashtagRepo.save(hashtag2);
