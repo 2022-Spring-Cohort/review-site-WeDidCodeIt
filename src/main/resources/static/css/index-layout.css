@@ -64,3 +64,16 @@ img {
   height: 100%;
   width: 100%;
 }
+.container1{
+  border-radius: 200px;
+  border: 1px;
+  background-color: #434343;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows:auto;
+  margin: 10px auto;
+  text-decoration: none;
+  width: 80%;
+
+}
