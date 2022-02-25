@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Hashtag Page</title>
     <link rel="stylesheet" type="text/css" href="/css/Description-layout.css">
 </head>
 <body>
+<div class="hero">
+    <nav>
+        <a href="/">
+            <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!">
+        </a>
+
+
+        </a>
+    </nav>
+</div>
 <h1>Hashtag page</h1>
 
 <p th:text ="'#'+${hashtag.name}">This is the hashtag</p>

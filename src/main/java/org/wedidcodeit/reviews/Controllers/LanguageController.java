@@ -54,10 +54,6 @@ public class LanguageController {
             hashtag2.addLanguage(language);
             hashtagRepo.save(hashtag2);
         }
-
-
-
-
         return "redirect:/languages/"+ id;
     }
 
@@ -82,11 +78,5 @@ public class LanguageController {
         model.addAttribute("hashtag", hashtagRepo.findById(id).get());
         return "hashtag";
     }
-
-
-
-
-
-
 
 }
