@@ -80,7 +80,7 @@ public class LanguageController {
     @GetMapping ("/hashtags/{id}")
     public String listHashtags (Model model, @PathVariable long id){
         model.addAttribute("hashtag", hashtagRepo.findById(id).get());
-        return "Hashtag";
+        return "hashtag";
     }
 
 

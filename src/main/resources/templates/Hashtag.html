@@ -7,7 +7,7 @@
 <body>
 <p>Hashtag page</p>
 
-
+<p th:text ="'#'+${hashtag.name}">This is the hashtag</p>
 <ul>
 
     <li th:each="language:${hashtag.languages}" >
