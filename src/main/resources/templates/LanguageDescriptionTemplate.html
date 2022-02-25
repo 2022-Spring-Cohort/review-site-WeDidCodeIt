@@ -43,6 +43,8 @@
             <h2 th:text="${language.inventor}">Inventor Space</h2>
         </div>
 
+        <div class="CenterThis">
+
         <form th:action="'/languages/'+${language.id}" method="POST">
             <label for="hashtag">Enter hastag:</label><br>
             <textarea id="hashtag" name="hashtag" rows="1" cols="60"></textarea><br>
@@ -52,13 +54,11 @@
         </form>
 
 
-        <p>List of reviews below:</p>
+        <h2>List of reviews below:</h2>
         <ul>
-
             <li th:each="review:${language.reviews}" th:text="${review}"></li>
         </ul>
-
-        <p>List of hashtagsbelow:</p>
+        <h2>List of hashtags below:</h2>
         <ul>
             <li th:each="hashtag:${language.hashtags}">
 
@@ -66,10 +66,8 @@
 
 
             </li>
-
-
         </ul>
-
+        </div>
 
         <!--            </section>-->
 
