@@ -54,10 +54,6 @@ public class LanguageController {
             hashtag2.addLanguage(language);
             hashtagRepo.save(hashtag2);
         }
-
-
-
-
         return "redirect:/languages/"+ id;
     }
 
@@ -80,13 +76,7 @@ public class LanguageController {
     @GetMapping ("/hashtags/{id}")
     public String listHashtags (Model model, @PathVariable long id){
         model.addAttribute("hashtag", hashtagRepo.findById(id).get());
-        return "Hashtag";
+        return "hashtag";
     }
-
-
-
-
-
-
 
 }

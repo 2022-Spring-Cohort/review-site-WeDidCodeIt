@@ -4,15 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Hashtag Page</title>
-
+    <link rel="stylesheet" type="text/css" href="/css/Description-layout.css">
 </head>
 <body>
-<p>Hashtag page</p>
+<h1>Hashtag page</h1>
 
-
+<p th:text ="'#'+${hashtag.name}">This is the hashtag</p>
 <ul>
-
-    <li th:each="language:${hashtag.languages}" >
+    <li class="button" th:each="language:${hashtag.languages}" >
         <a th:href="'/languages/'+${language.id}" th:text="${language.name}"></a>
     </li>
 </ul>

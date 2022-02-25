@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" type="text/css" href="/css/Description-layout.css">
     <meta charset="UTF-8">
     <title>Hashtags Page</title>
 </head>
 <body>
 <p>Hashtags page</p>
-
-
 <ul>
-
     <li th:each="hashtag:${hashtags}" >
         <a th:href="'/hashtags/'+${hashtag.id}" th:text="${hashtag.name}"></a>
     </li>
