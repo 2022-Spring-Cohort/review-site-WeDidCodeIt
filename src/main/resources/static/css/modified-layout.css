@@ -1,0 +1,144 @@
+
+
+.hero{
+  display: flex;
+  justify-content: center;
+  border: 5px;
+  background-color: black;
+  border:solid;
+  border: white;
+  border-radius: 10px;
+  max-width: 100%;
+  border-style: ridge;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top:8px;
+}
+body {
+  background-color: #383840;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+ol {
+    display: flex;
+    color: blue;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+    align-items: flex-end;
+}
+.uppercase {
+text-transform: capitalize;
+}
+
+.table-dark{
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+
+}
+h1 {
+text-align: right;
+}
+.title {
+
+   font-size: 69gitpx;
+   font-weight: 700;
+   text-decoration: underline;
+   font-family: Georgia, serif;
+   font-color: black;
+
+   }
+.table-dark{
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+
+}
+.table{
+    background-color: #009879;
+
+}
+
+.styled-body {
+    font-weight: bold;
+    background-color: white;
+    justify-content: center;
+    justify-items: center;
+}
+
+td {
+  text-align: center;
+}
+/////////////
+.title{
+display:flex;
+justify-content: center;
+}
+
+.stayled-body{
+
+    font-weight: bold;
+    background-color: white;
+    color: #009879;
+}
+
+img {
+  width: 100px;
+  border-radius: 10px;
+}
+.descriptPic{
+  width: 500px;
+}
+
+
+
+.CenterThis {
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+width:100%;
+
+}
+
+.container1{
+  border-radius: 200px;
+  border: 1px;
+  background-color: #434343;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows:auto;
+  margin: 10px auto;
+  text-decoration: none;
+  width: 80%;
+}
+
+
+
+.box{
+  background-color: #a64452;
+  margin: 10px 10px 10px 10px;
+  border: #f7c873;
+  border-radius: 10px;
+  border-style: ridge;
+}
+.box1_descript{
+  display: flex;
+  justify-content: center;
+}
+
+.container1 a{
+  display:inline-block;
+  text-decoration: none;
+  color: black;
+  height: 100%;
+  width: 100%;
+}
+///////////////////////////////
+
+

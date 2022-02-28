@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/Description-layout.css">
+    <meta charset="UTF-8">
+    <title>Hashtags Page</title>
+</head>
+<body>
+<div class="hero">
+    <nav>
+        <a href="/">
+            <img src="/pics/WEDIDCODEITlogo.png" alt="WE DID CODE IT!!!">
+        </a>
+    </nav>
+</div>
+<p>Hashtags page</p>
+<ul>
+    <li class="button" th:each="hashtag:${hashtags}" >
+        <a th:href="'/hashtags/'+${hashtag.id}" th:text="${hashtag.name}"></a>
+    </li>
+</ul>
+
+
+</body>
+</html>
